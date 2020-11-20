@@ -1,29 +1,58 @@
-
-@extends('admin.user.layout')
+@extends('admin.user.sidebar')
 @section('content')
-<table class="table table-hover">
-      <thead>
-        <th>Name</th>
-        <th>Email</th>
-        <th >Password</th>
-        <th>created Date</th>
-        <th>Edit</th>
-        <th>Lock</th>
-        <th>Delete</th>
-      </thead>
-      <tbody>
-        @foreach($users ?? '' as $user)
-          <tr>
-            <td>{{$user->name}} </td>
-            <td>{{$user->email}} </td>
-            <td>{{$user->password}} </td>
-            <td>{{$user->created_at}} </td>
-            <td><a href="{{route('user.getedit',$user->id)}}" class="btn btn-primary"><i class="fa fa-edit"></i></a></td>
-            <td><a href="" class="btn btn-warning"><i class="fa fa-lock"></i></a></td>
-            <td><a href="{{route('user.delete',$user->id)}}" class="btn btn-danger"><i class="fa fa-trash"></i></a></td>
-          </tr>
-        @endforeach
-      </tbody>
-  </table>
+<div class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title"><b>USER</b></h4>
+                            <a href="{{route('user.create')}}" class="btn btn-success">Thêm mới</a>
+                            <br>
+                        </div>
+                        <div class="panel-body">
+                            <div class="bootstrap-table">
+                                <table>            
+                                    <tr class="">                
+                                        <th>USERNAME</th>
+                                        <th>PASSWORD</th>
+                                        <th >HỌ VÀ TÊN</th>
+                                        <th >ĐỊA CHỈ</th>
+                                        <th >EMAIL</th>
+                                        <th >SỐ ĐIỆN THOẠI</th>
+                                        <th >LOẠI</th>
+                                        <th >TRẠNG THÁI</th>
+                                        <th >TÙY CHỌN</th>
+                                    
+                                    </tr>
+                            
+                                    @foreach($user ?? '' as  $users)
+                                        <tr>
+                                            <td style="text-align:center">{{$users->name}}</td>
+                                            <td style="text-align:center"> {{$users->password}}</td>
+                                            <td style="text-align:center">{{$users->hoten}}</td>
+                                            <td style="text-align:center">{{$users->diachi}}</td>                             
+                                            <td style="text-align:center">{{$users->email}}</td>
+                                            <td style="text-align:center">{{$users->sdt}}</td>
+                                            <td style="text-align:center">{{$users->loai}}</td>
+                                            <td style="text-align:center">{{$users->trangthai}}</td>
+                                            <td>
+                                            <form action="{{route('user.destroy', $users->id)}}" method="POST">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                <a href="{{route('user.edit',$users->id)}}" class="btn btn-warning"><span class="glyphicon glyphicon-edit"></span> Sửa</a>
+                                                <button type="submit" onclick="return confirm('Bạn có chắc chắn muốn xóa?')" class="btn btn-danger"><i class="fa fa-trash"></i></button>
+                                            </td>
+                                            </form>
+                                    @endforeach
+                                </table>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
 @stop
-  
