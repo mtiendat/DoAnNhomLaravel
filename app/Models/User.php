@@ -16,10 +16,18 @@ class User extends Authenticatable
      *
      * @var array
      */
+    use HasFactory;
+    protected $table='users';
     protected $fillable = [
         'name',
         'email',
-        'password'
+        'password',
+        'hoten',
+        'diachi',
+        'sdt',
+        'email',
+        'loai',
+        'trangthai'
     ];
 
     /**

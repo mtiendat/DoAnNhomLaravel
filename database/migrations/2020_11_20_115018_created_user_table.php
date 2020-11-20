@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\Hash;
-class CreateUsersTable extends Migration
+class CreateduserTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,18 +14,30 @@ class CreateUsersTable extends Migration
     public function up()
     {
         Schema::create('users', function (Blueprint $table) {
-            $table->id();
+            $table->engine = "InnoDB";
+            $table->increments('id')->unsigned();
             $table->string('name');
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->string('hoten');
+            $table->string('diachi');
+            $table->string('sdt');
+            $table->string('email')->unique();
+            $table->string('loai');
+            $table->string('trangthai');
+            $table->timestamp('email_verified_at')->nullable();         
             $table->rememberToken();
             $table->timestamps();
         });
         DB::table('users')->insert([
             'name' => 'admin',
+            'password' => Hash::Make('123456'),
+            'hoten' => 'Võ Thái Hùng',
+            'diachi' => 'Q7',   
+            'sdt' => '0852925296',
             'email' => 'admin@example.com',
-            'password' => Hash::Make('123456')
+            'loai' => 'user',
+            'trangthai' => 'active',
+
         ]);
     }
 
@@ -36,6 +48,6 @@ class CreateUsersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('user');
     }
 }

@@ -27,7 +27,7 @@
                         </a>
                     </li>
                     <li>
-                        <a class="nav-link" href="{{route('user.index')}}">
+                        <a class="nav-link" href="">
                             <i class="nc-icon nc-paper-2"></i>
                             <p>User</p>
                         </a>
@@ -51,7 +51,7 @@
             <!-- Navbar -->
             <nav class="navbar navbar-expand-lg " color-on-scroll="500">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="#pablo"> Sản Phẩm </a>
+                    <a class="navbar-brand" href="#pablo">Hóa Đơn </a>
                     <button href="" class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-bar burger-lines"></span>
                         <span class="navbar-toggler-bar burger-lines"></span>
@@ -62,7 +62,7 @@
                             <li class="nav-item">
                                 <a href="#" class="nav-link" data-toggle="dropdown">
                                     <i class="nc-icon nc-palette"></i>
-                                    <span class="d-lg-none">Sản Phẩm</span>
+                                    <span class="d-lg-none">Hóa Đơn</span>
                                 </a>
                             </li>
                             <li class="dropdown nav-item">

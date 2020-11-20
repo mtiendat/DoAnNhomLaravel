@@ -11,7 +11,7 @@ Route::group(['prefix' => 'panel', 'namespace' => 'admin'], function() {
 });
 
 Route::group(['middleware' => 'CheckAdminLogin','prefix' => 'panel'], function() {
-	Route::get('/', function() {return view('admin.home');})->name('welcome');
+	Route::get('/', function() {return view('admin.layout');})->name('welcome');
 });
 
 Route::group(['middleware' => 'CheckAdminLogin','prefix' => 'panel/user', 'namespace' => 'admin'], function() {
@@ -28,6 +28,8 @@ Route::resource('panel/nhacungcap',admin\NhaCungCapController::class);
 Route::resource('panel/category',admin\CategoryController::class);
 Route::resource('panel/loaisp',admin\LoaispController::class);
 Route::resource('panel/sanpham',admin\SanPhamController::class);
+Route::resource('panel/hoadon',admin\HoaDonController::class);
+Route::resource('panel/user',admin\UserController::class);
 Route::get('panel/category/productlist/{id}','admin\CategoryController@productlist')->name('category.productlist');
 
 /*

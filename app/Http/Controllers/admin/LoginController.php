@@ -23,7 +23,7 @@ class LoginController extends Controller
         $login = [
             'email' => $request->txtEmail,
             'password' => $request->txtPassword,
-            'status'    =>1
+            'trangthai'    =>'active',
         ];
         if (Auth::attempt($login)) {
         return redirect('panel')->with('name',Auth::User()->name);
