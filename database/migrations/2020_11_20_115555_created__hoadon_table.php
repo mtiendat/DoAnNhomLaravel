@@ -16,7 +16,8 @@ class CreatedHoadonTable extends Migration
         Schema::create('hoadon', function (Blueprint $table) {
             $table->engine = "InnoDB";
             $table->increments('id')->unsigned();
-            $table->integer('user_id')->nullable();
+            $table->integer('user_id')->unsigned()->nullable();
+            $table->foreign('user_id')->references('id')->on('users');
             $table->string('hoten')->nullable();
             $table->integer('sdt')->nullable();
             $table->string('diachi')->nullable();

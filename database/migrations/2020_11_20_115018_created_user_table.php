@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\Hash;
-class CreateUsersTable extends Migration
+class CreateduserTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,7 +14,8 @@ class CreateUsersTable extends Migration
     public function up()
     {
         Schema::create('users', function (Blueprint $table) {
-            $table->id();
+            $table->engine = "InnoDB";
+            $table->increments('id')->unsigned();
             $table->string('name');
             $table->string('password');
             $table->string('hoten');
@@ -35,7 +36,7 @@ class CreateUsersTable extends Migration
             'sdt' => '0852925296',
             'email' => 'admin@example.com',
             'loai' => 'user',
-            'trangthai' => 'ok',
+            'trangthai' => 'active',
 
         ]);
     }

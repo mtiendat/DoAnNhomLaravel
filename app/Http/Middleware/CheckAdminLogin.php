@@ -21,7 +21,7 @@ class CheckAdminLogin
         {
             $user = Auth::user();
             // nếu level =1 (admin), status = 1 (actived) thì cho qua.
-            if ($user->status == 1 )
+            if ($user->trangthai == 'active' )
             {
                 return $next($request);
             }
@@ -31,6 +31,6 @@ class CheckAdminLogin
                 return redirect()->route('getLogin');
             }
         } else
-            return redirect('panel/login');
+            return redirect('panel/user');
     }
 }

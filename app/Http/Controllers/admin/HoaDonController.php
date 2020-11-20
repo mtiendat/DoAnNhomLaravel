@@ -45,7 +45,7 @@ class HoaDonController extends Controller
             'sdt' => 'required',
             'diachi' => 'required',
             'thanhtien' => 'required',
-            'tranthai'=>'required',
+            'trangthai'=>'required',
         
         ]);
         $hoadon->user_id=$request->user_id;

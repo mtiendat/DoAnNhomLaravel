@@ -38,7 +38,7 @@
                                 <div class="col-md-5 pr-1">
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Trạng Thái</label>
-                                        <input type="text" name="TrangThai" class="form-control" placeholder="Trạng thái">
+                                        <input type="text" name="trangthai" class="form-control" placeholder="Trạng thái">
                                     </div>
                                 </div>
                             </div>
