@@ -9,60 +9,99 @@ use Illuminate\Support\Facades\Hash;
 use App\Models\User;
 use Session;
 class UserController extends Controller
-{   public $viewprefix;
-    public $viewnamespace;
+{
     public function __construct()
-    {   //$this->middleware('CheckAdminLogin');
+    {
         $this->viewprefix='admin.user.';
-        $this->viewnamespace='panel/user';
+        $this->viewnamespace='admin/user';
     }
     public function index()
     {
-        $users = User::all();
-        return view($this->viewprefix.'index', compact('users'));
+        $user = User::all();
+        return view($this->viewprefix.'index', compact('user'));
     }
-    public function getadd()
-    {
-        return view('admin.user.add'); 
-    }
-    public function postadd(request $request)
-    {
-    	   $user = new User;
-           $user->name = $request->txtname;
-           $user->email = $request->txtemail;
-           $user->password = Hash::make($request->txtpassword);
-           $user->save();
-           return redirect('panel/user');
-    }
-    public function getedit($id)
-    {
-        $user = User::findOrFail($id);
-        return view($this->viewprefix.'edit',compact('user'));      
-    }
-    public function postedit($id,request $request)
-    {
-        $user = User::findOrFail($id);
+ 
+     public function create()
+     {
+         //
+         return view($this->viewprefix.'create');
+     }
+
+     public function store(Request $request)
+     {
+        
+         $user= new User;
         $this->validate($request, [
             'txtname' => 'required',
+            'txtpassword' => 'required',
+            'txthoten' => 'required',
+            'txtdiachi' => 'required',
             'txtemail' => 'required',
-            'txtpassword' => 'required'
+            'txtsdt' => 'required',
+            'txtloai' => 'required',
+            'txttrangthai' => 'required'
+            
         ]);
         $user->name = $request->txtname;
-        $user->email = $request->txtemail;
         $user->password = Hash::make($request->txtpassword);
-        if($user->save())
+        $user->hoten = $request->txthoten;
+        $user->diachi = $request->txtdiachi;
+        $user->email = $request->txtemail;
+        $user->sdt = $request->txtsdt;
+        $user->loai = $request->txtloai;
+        $user->trangthai = $request->txttrangthai;
+         //if(Category::create($request->all()))
+         if($user->save())
+         {
+             Session::flash('message', 'successfully!');
+         }
+         else
+             Session::flash('message', 'Failure!');
+         return redirect()->route('user.index');
+    }
+    public function edit(User $user)
+    {
+        return view($this->viewprefix.'edit')->with('user', $user);
+    }
+
+    public function show(User $user)
+    {
+        //
+    }
+    public function update(Request $request, User $user)
+    {
+        $data=$request->validate([
+            'txtname' => 'required',
+            'txtpassword' => 'required',
+            'txthoten' => 'required',
+            'txtdiachi' => 'required',
+            'txtemail' => 'required',
+            'txtsdt' => 'required',
+            'txtloai' => 'required',
+            'txttrangthai' => 'required'
+        ]);
+        $user->name = $request->txtname;
+        $user->password = Hash::make($request->txtpassword);
+        $user->hoten = $request->txthoten;
+        $user->diachi = $request->txtdiachi;
+        $user->email = $request->txtemail;
+        $user->sdt = $request->txtsdt;
+        $user->loai = $request->txtloai;
+        $user->trangthai = $request->txttrangthai;
+        if($user->update($data))
+        {
             Session::flash('message', 'successfully!');
+        }
         else
             Session::flash('message', 'Failure!');
-        return redirect('panel/user');   
-    }
-    public function delete($id)
+        return redirect()->route('user.index');
+    }  
+    public function destroy(User $user)
     {
-        $user = User::findOrFail($id);   
         if($user->delete())
             Session::flash('message', 'successfully!');
         else
             Session::flash('message', 'Failure!');
-        return redirect('panel/user');       
+        return redirect()->route('user.index');
     }
 }
