@@ -16,4 +16,5 @@ class ChiTietHoaDon extends Model
         'KhuyenMai',
         'ThanhTien',
     ];
+   
 }
