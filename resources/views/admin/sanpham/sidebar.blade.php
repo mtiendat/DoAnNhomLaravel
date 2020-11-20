@@ -27,7 +27,7 @@
                         </a>
                     </li>
                     <li>
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="{{route('user.index')}}">
                             <i class="nc-icon nc-paper-2"></i>
                             <p>User</p>
                         </a>
