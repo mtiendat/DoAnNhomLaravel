@@ -78,15 +78,12 @@ class HoaDonController extends Controller
     public function update(Request $request, Hoadon $hoadon)
     {
         $data=$request->validate([
-            'user_id' => 'required',
             'hoten' => 'required',
             'sdt' => 'required',
             'diachi' => 'required',
             'thanhtien' => 'required',
-            'tranthai'=>'required',
+            'trangthai'=>'required',
         ]);    
-        
-       
         
         //if(Category::create($request->all()))
         if($hoadon->update($data))
