@@ -28,6 +28,7 @@ Route::resource('panel/nhacungcap',admin\NhaCungCapController::class);
 Route::resource('panel/category',admin\CategoryController::class);
 Route::resource('panel/loaisp',admin\LoaispController::class);
 Route::resource('panel/sanpham',admin\SanPhamController::class);
+Route::resource('panel/hoadon',admin\HoaDonController::class);
 Route::get('panel/category/productlist/{id}','admin\CategoryController@productlist')->name('category.productlist');
 
 /*
