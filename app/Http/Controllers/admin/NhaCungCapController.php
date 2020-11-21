@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\admin;
 
 use App\Models\Nhacungcap;
+use App\Models\LoaiSP;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Session;
@@ -114,6 +115,12 @@ class NhaCungCapController extends Controller
      * @param  \App\Models\Nhacungcap  $nhacungcap
      * @return \Illuminate\Http\Response
      */
+    public function loaisplist($id)
+    {
+        $nhacungcaps=Nhacungcap::find($id);
+        $loaisanpham=Nhacungcap::findOrFail($id)->loaisp;
+        return view($this->viewprefix.'loaisplist',compact('nhacungcaps','loaisanpham'));
+    }
     public function destroy(Nhacungcap $nhacungcap)
     {
         //

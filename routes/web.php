@@ -31,7 +31,7 @@ Route::resource('panel/sanpham',admin\SanPhamController::class);
 Route::resource('panel/hoadon',admin\HoaDonController::class);
 Route::resource('panel/chitiethoadon',admin\ChiTietHoaDonController::class);
 Route::resource('panel/user',admin\UserController::class);
-Route::get('panel/category/productlist/{id}','admin\CategoryController@productlist')->name('category.productlist');
+Route::get('panel/nhacungcap/loaisplist/{id}','admin\NhaCungCapController@loaisplist')->name('nhacungcap.loaisplist');
 
 /*
 GET	    /product	        		index	product.index

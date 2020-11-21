@@ -14,5 +14,7 @@ class LoaiSP extends Model
         'nhacungcap',
         'trangthai',
     ];
-
+    public function nhacungcap(){
+        return $this->belongsTo('App\Models\Nhacungcap', 'nhacungcap', 'id');
+    }
 }

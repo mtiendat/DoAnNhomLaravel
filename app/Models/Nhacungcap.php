@@ -14,4 +14,7 @@ class Nhacungcap extends Model
         'diachi',
         'trangthai',
     ];
+    public function loaisp(){
+        return $this->hasMany('App\Models\LoaiSP', 'nhacungcap');
+    }
 }

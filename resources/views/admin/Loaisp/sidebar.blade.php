@@ -1,6 +1,6 @@
 @extends('admin.layout')
 @section('sidebar')
-<div class="sidebar" data-image="../assets/img/sidebar-5.jpg">
+<div class="sidebar" data-image="{!! asset('admin/img/sidebar-5.jpg') !!}">
             <div class="sidebar-wrapper">
                 <div class="logo">
                     <a href="http://www.creative-tim.com" class="simple-text">
@@ -27,19 +27,19 @@
                         </a>
                     </li>
                     <li>
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="{{route('user.index')}}">
                             <i class="nc-icon nc-paper-2"></i>
                             <p>User</p>
                         </a>
                     </li>
                     <li>
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="{{route('hoadon.index')}}">
                             <i class="nc-icon nc-atom"></i>
                             <p>Hóa Đơn</p>
                         </a>
                     </li>
                     <li>
-                        <a class="nav-link" href="./maps.html">
+                        <a class="nav-link" href="{{route('chitiethoadon.index')}}">
                             <i class="nc-icon nc-pin-3"></i>
                             <p>Chi Tiết Hóa Đơn</p>
                         </a>

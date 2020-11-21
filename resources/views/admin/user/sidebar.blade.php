@@ -1,6 +1,6 @@
 @extends('admin.layout')
 @section('sidebar')
-    <div class="sidebar" data-image="../assets/img/sidebar-5.jpg">
+<div class="sidebar" data-image="{!! asset('admin/img/sidebar-5.jpg') !!}">
         <div class="sidebar-wrapper">
             <div class="logo">
                 <a href="http://www.creative-tim.com" class="simple-text">
@@ -8,7 +8,7 @@
                 </a>
             </div>
             <ul class="nav">
-                <li class="nav-item active">
+                <li>
                     <a class="nav-link" href="{{route('sanpham.index')}}">
                         <i class="nc-icon nc-chart-pie-35"></i>
                         <p>Sản Phẩm</p>
@@ -26,14 +26,14 @@
                         <p>Nhà Cung Cấp</p>
                     </a>
                 </li>
-                <li>
+                <li class="nav-item active">
                     <a class="nav-link" href="{{route('user.index')}}">
                         <i class="nc-icon nc-paper-2"></i>
                         <p>User</p>
                     </a>
                 </li>
                 <li>
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="{{route('hoadon.index')}}">
                         <i class="nc-icon nc-atom"></i>
                         <p>Hóa Đơn</p>
                     </a>
