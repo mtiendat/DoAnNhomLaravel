@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Nhacungcap;
+use App\Models\SanPham;
 use Illuminate\Http\Request;
 use App\Models\LoaiSP;
 use Session;
@@ -107,6 +109,12 @@ class LoaispController extends Controller
      * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
+
+    public function splist($id){
+        $loaisanpham=LoaiSP::find($id);
+        $sanphams=LoaiSP::findOrFail($id)->sanpham;
+        return view($this->viewprefix.'splist',compact('loaisanpham','sanphams'));
+    }
     public function destroy(LoaiSP $loaisp)
     {
         if($loaisp->delete())

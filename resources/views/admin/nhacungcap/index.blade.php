@@ -20,6 +20,7 @@
                                         <th> Tên Nhà Cung Cấp</th>
                                         <th> Địa Chỉ</th>
                                         <th> Trạng Thái</th>
+                                        <th> Xem loại sản phẩm</th>
                                         <th>Tùy chọn</th>
                                     </tr>
                     
@@ -32,6 +33,7 @@
                                             <td style="text-align:center">{{$ncc->tenncc}}</td>
                                             <td style="text-align:center">{{$ncc->diachi}}</td>
                                             <td style="text-align:center">{{$ncc->trangthai}}</td>
+                                            <td><a href="{{route('nhacungcap.loaisplist', $ncc->id)}}" class="btn btn-outline-primary"><i class="fa fa-eye"></i></a></td>
                                             <td><a href="{{route('nhacungcap.edit', $ncc->id)}}" class="btn btn-primary"><i class="fa fa-edit"></i></a>
                                             <button type="submit" onclick="return confirm('Bạn có chắc chắn muốn xóa?')" class="btn btn-danger"><i class="fa fa-trash"></i></button>
                                             </td>                              
