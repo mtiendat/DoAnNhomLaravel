@@ -12,7 +12,7 @@
                         </div>
                         <div class="panel-body">
                             <div class="bootstrap-table">
-                                <table>            
+                                <table>
                                     <tr class="">
                                         <th> ID</th>
                                         <th  width="50%"> Tên Sản Phẩm</th>
@@ -25,14 +25,14 @@
                                         <th> Trạng Thái</th>
                                         <th width="70%">Tùy chọn</th>
                                     </tr>
-                            
+
                                     @foreach($sanphams ?? '' as  $sanpham)
                                         <tr>
                                             <td style="text-align:center">{{$sanpham->id}}</td>
                                             <td style="text-align:center">{{$sanpham->TenSP}}</td>
                                             <td style="text-align:center"> {{$sanpham->MaLoai}}</td>
-                                            <td style="text-align:center">{{$sanpham->Gia}}</td>
-                                            <td style="text-align:center">{{$sanpham->GiaMoi}}</td>
+                                            <td style="text-align:center">{{number_format($sanpham->Gia)}}</td>
+                                            <td style="text-align:center">{{number_format($sanpham->GiaMoi)}}</td>
                                             <td><img class="img-thumbnail" src="{{asset('image/'.$sanpham->Image)}}"></td>
                                             <td style="text-align:center">{{$sanpham->Size}}</td>
                                             <td style="text-align:center">{{$sanpham->SoLuong}}</td>

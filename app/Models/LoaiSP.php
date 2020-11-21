@@ -20,6 +20,6 @@ class LoaiSP extends Model
 
     public function sanpham()
     {
-        return $this->belongsTo('App\Models\SanPham', 'MaLoai', 'id');
+        return $this->hasMany('App\Models\SanPham', 'MaLoai', 'id');
     }
 }
