@@ -39,7 +39,7 @@
                     </a>
                 </li>
                 <li>
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="{{route('chitiethoadon.index')}}">
                         <i class="nc-icon nc-pin-3"></i>
                         <p>Chi Tiết Hóa Đơn</p>
                     </a>

@@ -8,26 +8,26 @@
                     </a>
                 </div>
                 <ul class="nav">
-                    <li>
+                    <li class="nav-item active">
                         <a class="nav-link" href="{{route('sanpham.index')}}">
                             <i class="nc-icon nc-chart-pie-35"></i>
                             <p>Sản Phẩm</p>
                         </a>
                     </li>
-                    <li class="nav-item active">
+                    <li>
                         <a class="nav-link" href="{{route('loaisp.index')}}">
                             <i class="nc-icon nc-circle-09"></i>
                             <p>Loại Sản Phẩm</p>
                         </a>
                     </li>
                     <li>
-                        <a class="nav-link" href="{{route('chitiethoadon.index')}}">
+                        <a class="nav-link" href="{{route('nhacungcap.index')}}">
                             <i class="nc-icon nc-notes"></i>
                             <p>Nhà Cung Cấp</p>
                         </a>
                     </li>
                     <li>
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="">
                             <i class="nc-icon nc-paper-2"></i>
                             <p>User</p>
                         </a>
@@ -39,7 +39,7 @@
                         </a>
                     </li>
                     <li>
-                        <a class="nav-link" href="./maps.html">
+                        <a class="nav-link" href="{{route('chitiethoadon.index')}}">
                             <i class="nc-icon nc-pin-3"></i>
                             <p>Chi Tiết Hóa Đơn</p>
                         </a>
@@ -51,7 +51,7 @@
             <!-- Navbar -->
             <nav class="navbar navbar-expand-lg " color-on-scroll="500">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="#pablo">Loại Sản Phẩm </a>
+                    <a class="navbar-brand" href="#pablo">Chi Tiết Hóa Đơn </a>
                     <button href="" class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-bar burger-lines"></span>
                         <span class="navbar-toggler-bar burger-lines"></span>
@@ -62,7 +62,7 @@
                             <li class="nav-item">
                                 <a href="#" class="nav-link" data-toggle="dropdown">
                                     <i class="nc-icon nc-palette"></i>
-                                    <span class="d-lg-none">Loại Sản Phẩm</span>
+                                    <span class="d-lg-none">Chi Tiết Hóa Đơn</span>
                                 </a>
                             </li>
                             <li class="dropdown nav-item">

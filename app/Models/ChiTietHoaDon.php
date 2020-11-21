@@ -9,12 +9,17 @@ class ChiTietHoaDon extends Model
 {
     use HasFactory;
     protected $table='chitiethoadon';
-    protected $fillable = [
+    protected $fillable =[
+        'id_HoaDon',
         'TenSP',
         'SoLuong',
         'Gia',
         'KhuyenMai',
-        'ThanhTien',
+        'ThanhTien'
+
     ];
-   
+    public function hoadon()
+    {
+        return $this->belongsTo('App\Models\HoaDon','id_hoadon','id');
+    }
 }
