@@ -12,6 +12,7 @@
                         <div class="panel-body">
                             <div class="bootstrap-table">
                                 <table>
+                                    <tr>
 
                                     <tr>
                                         <th> Tên Loại</th>
@@ -19,8 +20,6 @@
                                         <th> Trạng Thái</th>
                                         <th>Tùy chọn</th>
                                     </tr>
-
-
                                     @foreach($loaisanpham ??'' as $cates)
                                         <tr>
                                         <form action="{{route('loaisp.destroy', $cates->id)}}" method="POST">
@@ -36,7 +35,10 @@
                                         </tr>
                                     @endforeach
 
-
+                                            </td>
+                                            </form>
+                                        </tr>
+                                    @endforeach
                                 </table>
                             </div>
                             <div class="clearfix"></div>

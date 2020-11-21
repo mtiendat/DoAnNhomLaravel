@@ -17,7 +17,9 @@ class LoaiSP extends Model
     public function nhacungcap(){
         return $this->belongsTo('App\Models\Nhacungcap', 'nhacungcap', 'id');
     }
-    public function sanpham(){
-        return $this->belongsTo('App\Models\SanPham', 'MaLoai','id');
+
+    public function sanpham()
+    {
+        return $this->belongsTo('App\Models\SanPham', 'MaLoai', 'id');
     }
 }

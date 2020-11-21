@@ -34,6 +34,8 @@
                     </li>
                     <li class="nav-item active">
                         <a class="nav-link" href="{{hoadon.index}}">
+
+                        <a class="nav-link" href="{{route('hoadon.index')}}">
                             <i class="nc-icon nc-atom"></i>
                             <p>Hóa Đơn</p>
                         </a>
