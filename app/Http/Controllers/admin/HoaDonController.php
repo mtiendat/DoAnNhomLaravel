@@ -104,4 +104,10 @@ class HoaDonController extends Controller
             Session::flash('message', 'Failure!');
         return redirect()->route('hoadon.index');
     }
+    public function chitiethoadonlist($id)
+    {
+        $hoadon=HoaDon::find($id);
+        $chitiethoadons=HoaDon::find($id)->chitiethoadon;
+        return view($this->viewprefix.'chitiethoadonlist',compact('chitiethoadons','hoadon'));
+    }
 }

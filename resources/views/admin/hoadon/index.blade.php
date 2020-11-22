@@ -25,6 +25,7 @@
                                         <th style="text-align:center" width="20%">Địa Chỉ</th>
                                         <th style="text-align:center" width="15%">Thành Tiền</th>
                                         <th style="text-align:center" width="10%"> Trạng Thái</th>
+                                        <th style="text-align:center" width="20%">Xem Chi Tiết Hóa Đơn</th>
                                         <th style="text-align:center" width="20%">Tùy chọn</th>
                                     </tr>
                                   @foreach($hoadons ?? '' as $hoadon)
@@ -36,6 +37,7 @@
                                     <th style="text-align:center">{{$hoadon->diachi}}</th>
                                     <th style="text-align:center">{{$hoadon->thanhtien}}</th>
                                     <th style="text-align:center">{{$hoadon->trangthai}}</th>
+                                    <td><a href="{{route('hoadon.chitiethoadonlist', $hoadon->id)}}" class="btn btn-outline-primary"><i class="fa fa-eye"></i></a></td>
                                     <td>
                                     <form action="{{route('hoadon.destroy', $hoadon->id)}}" method="POST">
                                                     @csrf

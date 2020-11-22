@@ -18,8 +18,8 @@ class ChiTietHoaDon extends Model
         'ThanhTien'
 
     ];
-    public function hoadon()
-    {
-        return $this->belongsTo('App\Models\HoaDon','id_hoadon','id');
+    public function hoadon(){
+        return $this->belongsTo('App\Models\HoaDon', 'Id_HoaDon','id');
     }
+    
 }

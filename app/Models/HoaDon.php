@@ -17,4 +17,7 @@ class HoaDon extends Model
         'thanhtien',
         'trangthai',
     ];
+    public function chitiethoadon(){
+        return $this->hasMany('App\Models\ChiTietHoaDon', 'id_HoaDon');
+    }
 }

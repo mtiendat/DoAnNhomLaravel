@@ -20,7 +20,7 @@
                                         <th> Tên Nhà Cung Cấp</th>
                                         <th> Địa Chỉ</th>
                                         <th> Trạng Thái</th>
-                                        <th> Xem loại sản phẩm</th>
+                                        <th> Xem sản phẩm</th>
                                         <th>Tùy chọn</th>
                                     </tr>
                     

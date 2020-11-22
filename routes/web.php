@@ -34,7 +34,7 @@ Route::resource('panel/chitiethoadon',admin\ChiTietHoaDonController::class);
 Route::resource('panel/user',admin\UserController::class);
 Route::get('panel/loaisp/splist/{id}', 'admin\LoaispController@splist')->name('loaisp.splist');
 Route::get('panel/nhacungcap/loaisplist/{id}','admin\NhaCungCapController@loaisplist')->name('nhacungcap.loaisplist');
-
+Route::get('panel/hoadon/chitiethoadonlist/{id}', 'admin\HoaDonController@chitiethoadonlist')->name('hoadon.chitiethoadonlist');
 /*
 GET	    /product	        		index	product.index
 GET	    /product/create	    		create	product.create

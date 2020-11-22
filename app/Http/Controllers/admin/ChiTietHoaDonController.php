@@ -109,4 +109,5 @@ class ChiTietHoaDonController extends Controller
             Session::flash('message', 'Failure!');
         return redirect()->route('chitiethoadon.index');
     }
+    
 }
