@@ -5,6 +5,10 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Http\Request;
 use Auth;
+use App\Models\SanPham;
+use App\Models\LoaiSP;
+use App\Models\Nhacungcap;
+use App\Models\User;
 class CheckAdminLogin
 {
     /**
@@ -33,4 +37,6 @@ class CheckAdminLogin
         } else
             return redirect('panel/user');
     }
+
+    
 }

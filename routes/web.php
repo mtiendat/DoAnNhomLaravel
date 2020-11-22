@@ -11,7 +11,7 @@ Route::group(['prefix' => 'panel', 'namespace' => 'admin'], function() {
 });
 
 Route::group(['middleware' => 'CheckAdminLogin','prefix' => 'panel'], function() {
-	Route::get('/', function() {return view('admin.layout');})->name('welcome');
+    Route::get('/', function() {return view('admin.layoutadmin');});
 });
 
 Route::group(['middleware' => 'CheckAdminLogin','prefix' => 'panel/user', 'namespace' => 'admin'], function() {

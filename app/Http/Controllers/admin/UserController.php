@@ -20,7 +20,7 @@ class UserController extends Controller
         $user = User::all();
         return view($this->viewprefix.'index', compact('user'));
     }
- 
+
      public function create()
      {
          //
@@ -29,7 +29,7 @@ class UserController extends Controller
 
      public function store(Request $request)
      {
-        
+
          $user= new User;
         $this->validate($request, [
             'txtname' => 'required',
@@ -40,7 +40,7 @@ class UserController extends Controller
             'txtsdt' => 'required',
             'txtloai' => 'required',
             'txttrangthai' => 'required'
-            
+
         ]);
         $user->name = $request->txtname;
         $user->password = Hash::make($request->txtpassword);
@@ -95,7 +95,7 @@ class UserController extends Controller
         else
             Session::flash('message', 'Failure!');
         return redirect()->route('user.index');
-    }  
+    }
     public function destroy(User $user)
     {
         if($user->delete())
@@ -104,4 +104,6 @@ class UserController extends Controller
             Session::flash('message', 'Failure!');
         return redirect()->route('user.index');
     }
+
+    
 }
