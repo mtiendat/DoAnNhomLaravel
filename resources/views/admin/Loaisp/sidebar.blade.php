@@ -9,6 +9,12 @@
                 </div>
                 <ul class="nav">
                     <li>
+                        <a class="nav-link" href="{{route('home.index')}}">
+                            <i class="nc-icon nc-chart-pie-35"></i>
+                            <p>Home</p>
+                        </a>
+                    </li>
+                    <li>
                         <a class="nav-link" href="{{route('sanpham.index')}}">
                             <i class="nc-icon nc-chart-pie-35"></i>
                             <p>Sản Phẩm</p>
@@ -21,7 +27,7 @@
                         </a>
                     </li>
                     <li>
-                        <a class="nav-link" href="{{route('chitiethoadon.index')}}">
+                        <a class="nav-link" href="{{route('nhacungcap.index')}}">
                             <i class="nc-icon nc-notes"></i>
                             <p>Nhà Cung Cấp</p>
                         </a>

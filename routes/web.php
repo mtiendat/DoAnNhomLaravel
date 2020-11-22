@@ -24,6 +24,7 @@ Route::group(['middleware' => 'CheckAdminLogin','prefix' => 'panel/user', 'names
 	Route::get('delete/{id}','UserController@delete')->name('user.delete');
 });
 
+Route::resource('panel/home', admin\HomeController::class);
 Route::resource('panel/nhacungcap',admin\NhaCungCapController::class);
 Route::resource('panel/category',admin\CategoryController::class);
 Route::resource('panel/loaisp',admin\LoaispController::class);

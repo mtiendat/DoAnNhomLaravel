@@ -31,7 +31,7 @@
                                                 <td style="text-align:center">{{number_format($cates->Gia)}}</td>
                                                 <td style="text-align:center">{{number_format($cates->GiaMoi)}}</td>
                                                 <td style="text-align: center"><img  style="width:200px" class="img-thumbnail" src="{{asset('image/'.$cates->Image)}}"></td>
-                                                <td><a href="{{route('loaisp.edit', $cates->id)}}" class="btn btn-primary"><i class="fa fa-edit"></i></a>
+                                                <td><a href="{{route('sanpham.edit', $cates->id)}}" class="btn btn-primary"><i class="fa fa-edit"></i></a>
                                                     <button type="submit" onclick="return confirm('Bạn có chắc chắn muốn xóa?')" class="btn btn-danger"><i class="fa fa-trash"></i></button>
                                                 </td>
                                             </form>

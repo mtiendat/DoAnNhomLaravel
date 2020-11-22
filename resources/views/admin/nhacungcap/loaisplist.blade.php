@@ -38,7 +38,7 @@
                                             </td>
                                             </form>
                                         </tr>
-                                    @endforeach
+                                  
                                 </table>
                             </div>
                             <div class="clearfix"></div>

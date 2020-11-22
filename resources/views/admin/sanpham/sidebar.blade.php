@@ -8,7 +8,13 @@
                     </a>
                 </div>
                 <ul class="nav">
-                    <li class="nav-item active">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('home.index')}}">
+                            <i class="nc-icon nc-chart-pie-35"></i>
+                            <p>Home</p>
+                        </a>
+                    </li>
+                    <li class="nav-item ">
                         <a class="nav-link" href="{{route('sanpham.index')}}">
                             <i class="nc-icon nc-chart-pie-35"></i>
                             <p>Sản Phẩm</p>
