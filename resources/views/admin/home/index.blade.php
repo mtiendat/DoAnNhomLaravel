@@ -1,66 +1,41 @@
 @extends('admin.home.sidebar')
 @section('content')
-<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
-    <div class="row">
-        <div class="col-lg-12">
-            <h1 class="page-header">Home</h1>
-        </div>
-    </div><!--/.row-->
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-9">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title"><b>Thống Kê</b></h4>
+                        <br>
+                        <br><br>
+                    </div>
+                    <div class="panel-body">
+                        <div class="bootstrap-table">
+                            <table>
+                                <tr class="">
+                                    <th style="text-align:center" width="5%">Sản Phẩm</th>
+                                    <th style="text-align:center" width="20%">Danh Mục Sản Phầm</th>
+                                    <th style="text-align:center" width="10%">Nhà Cung Cấp</th>
+                                    <th style="text-align:center" width="20%">Người Dùng</th>
+                                    <th style="text-align:center" width="15%">Hóa Đơn</th>
+                                </tr>
+                                <tr >
+                                    <th style="text-align:center">{{count($sanpham)}}</th>
+                                    <th style="text-align:center">{{count($loaisp)}}</th>
+                                    <th style="text-align:center">{{count($nhacungcap)}}</th>
+                                    <th style="text-align:center">{{count($user)}}</th>
+                                    <th style="text-align:center">{{count($hoadon)}}</th>
+                            </table>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
 
-    <div class="row">
-        <div class="col-xs-12 col-md-6 col-lg-3">
-            <div class="panel panel-blue panel-widget ">
-                <div class="row no-padding">
-                    <div class="col-sm-3 col-lg-5 widget-left">
-                        <svg class="glyph stroked bag"><use xlink:href="#stroked-bag"></use></svg>
-                    </div>
-                    <div class="col-sm-9 col-lg-7 widget-right">
-                        <div class="large">{{count($sanpham)}}</div>
-                        <div class="text-muted">Sản phẩm</div>
-                    </div>
-                </div>
-            </div>
         </div>
-        <div class="col-xs-12 col-md-6 col-lg-3">
-            <div class="panel panel-orange panel-widget">
-                <div class="row no-padding">
-                    <div class="col-sm-3 col-lg-5 widget-left">
-                        <svg class="glyph stroked empty-message"><use xlink:href="#stroked-empty-message"></use></svg>
-                    </div>
-                    <div class="col-sm-9 col-lg-7 widget-right">
-                        <div class="large">{{count($nhacungcap)}}</div>
-                        <div class="text-muted">Nhà Cung Cấp</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-xs-12 col-md-6 col-lg-3">
-            <div class="panel panel-teal panel-widget">
-                <div class="row no-padding">
-                    <div class="col-sm-3 col-lg-5 widget-left">
-                        <svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg>
-                    </div>
-                    <div class="col-sm-9 col-lg-7 widget-right">
-                        <div class="large">{{count($user)}}</div>
-                        <div class="text-muted">Người dùng</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-xs-12 col-md-6 col-lg-3">
-            <div class="panel panel-red panel-widget">
-                <div class="row no-padding">
-                    <div class="col-sm-3 col-lg-5 widget-left">
-                        <svg class="glyph stroked app-window-with-content"><use xlink:href="#stroked-app-window-with-content"></use></svg>
-                    </div>
-                    <div class="col-sm-9 col-lg-7 widget-right">
-                        <div class="large">{{count($loaisp)}}</div>
-                        <div class="text-muted">Danh mục</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div><!--/.row-->
+    </div>
+</div>
 
 
     <div class="content">

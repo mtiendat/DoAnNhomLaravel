@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\HoaDon;
 use App\Models\LoaiSP;
 use App\Models\Nhacungcap;
 use App\Models\SanPham;
@@ -23,6 +24,7 @@ class HomeController extends Controller
         $user=User::all();
         $loaisp=LoaiSP::all();
         $nhacungcap=Nhacungcap::all();
-        return view($this->viewprefix.'index',compact('sanpham','user','loaisp','nhacungcap'));
+        $hoadon=HoaDon::all();
+        return view($this->viewprefix.'index',compact('sanpham','user','loaisp','nhacungcap','hoadon'));
     }
 }
