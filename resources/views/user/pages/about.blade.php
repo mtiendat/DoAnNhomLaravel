@@ -41,35 +41,35 @@
          <div class="container">
           		<div class="box_3">
           			<div class="col-md-3">
-          				<div class="content_box"><a href="single.html">
+          				<div class="content_box"><a href="{{route('user.single')}}">
 			   	          <img src="{!! asset('user/images/pic6.jpg')!!}" class="img-responsive" alt="">
 				   	   </a>
 				   </div>
-				    <h4><a href="{{route('user.men')}}">Contrary to popular belief</a></h4>
+				    <h4><a href="{{route('user.single')}}">Contrary to popular belief</a></h4>
 				    <p>$ 199</p>
 			        </div>
           			<div class="col-md-3">
-          				<div class="content_box"><a href="single.html">
+          				<div class="content_box"><a href="{{route('user.single')}}">
 			   	          <img src="{!! asset('user/images/pic2.jpg')!!}" class="img-responsive" alt="">
 				   	   </a>
 				   </div>
-				    <h4><a href="single.html">Contrary to popular belief</a></h4>
+				    <h4><a href="{{route('user.single')}}">Contrary to popular belief</a></h4>
 				    <p>$ 199</p>
 			        </div>
           			<div class="col-md-3">
-          				<div class="content_box"><a href="single.html">
+          				<div class="content_box"><a href="{{route('user.single')}}">
 			   	          <img src="{!! asset('user/images/pic4.jpg')!!}" class="img-responsive" alt="">
 				   	   </a>
 				   </div>
-				    <h4><a href="single.html">Contrary to popular belief</a></h4>
+				    <h4><a href="{{route('user.single')}}">Contrary to popular belief</a></h4>
 				    <p>$ 199</p>
 			        </div>
           			<div class="col-md-3">
-          				<div class="content_box"><a href="single.html">
+          				<div class="content_box"><a href="{{route('user.single')}}">
 			   	          <img src="{!! asset('user/images/pic5.jpg')!!}" class="img-responsive" alt="">
 				   	   </a>
 				   </div>
-				    <h4><a href="single.html">Contrary to popular belief</a></h4>
+				    <h4><a href="{{route('user.single')}}">Contrary to popular belief</a></h4>
 				    <p>$ 199</p>
 			        </div>
 			        <div class="clearfix"> </div>
