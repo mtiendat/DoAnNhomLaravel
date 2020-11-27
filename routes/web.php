@@ -39,8 +39,11 @@ Route::group(['prefix' => 'user', 'namespace' => 'user'], function() {
 
 	Route::get('index','PageController@index')->name('user.index');
 	Route::get('index_single','PageController@index_single')->name('user.index_single');
-	Route::get('login','PageController@login')->name('user.login');
+	Route::get('about','PageController@about')->name('user.about');
+	Route::get('men','PageController@men')->name('user.men');
 	Route::get('register','PageController@register')->name('user.register');
+	Route::get('login','PageController@login')->name('user.login');
+
 	
 });
 

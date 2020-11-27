@@ -23,16 +23,27 @@ class PageController extends Controller
       
         return view($this->viewprefix.'index_single');
     }
-    public function login()
+
+    public function about()
     {
       
-        return view($this->viewprefix.'login');
+        return view($this->viewprefix.'about');
     }
-    
+
+    public function men()
+    {
+      
+        return view($this->viewprefix.'men');
+    }
     public function register()
     {
       
         return view($this->viewprefix.'register');
+    }
+    public function login()
+    {
+      
+        return view($this->viewprefix.'login');
     }
     
 
