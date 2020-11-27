@@ -32,21 +32,22 @@ Route::resource('panel/sanpham',admin\SanPhamController::class);
 Route::resource('panel/hoadon',admin\HoaDonController::class);
 Route::resource('panel/chitiethoadon',admin\ChiTietHoaDonController::class);
 Route::resource('panel/user',admin\UserController::class);
+
 Route::get('panel/loaisp/splist/{id}', 'admin\LoaispController@splist')->name('loaisp.splist');
 Route::get('panel/nhacungcap/loaisplist/{id}','admin\NhaCungCapController@loaisplist')->name('nhacungcap.loaisplist');
 Route::get('panel/hoadon/chitiethoadonlist/{id}', 'admin\HoaDonController@chitiethoadonlist')->name('hoadon.chitiethoadonlist');
-Route::group(['prefix' => 'user', 'namespace' => 'user'], function() {
 
+Route::group(['prefix' => 'user', 'namespace' => 'user'], function() {
 	Route::get('index','PageController@index')->name('user.index');
 	Route::get('index_single','PageController@index_single')->name('user.index_single');
-	Route::get('about','PageController@about')->name('user.about');
+    Route::get('about','PageController@about')->name('user.about');
+    Route::get('checkout','PageController@checkout')->name('user.checkout');
+    Route::get('contact','PageController@contact')->name('user.contact');
 	Route::get('men','PageController@men')->name('user.men');
 	Route::get('register','PageController@register')->name('user.register');
-	Route::get('login','PageController@login')->name('user.login');
+    Route::get('login','PageController@login')->name('user.login');
 
-	
 });
-
 
 
 /*
