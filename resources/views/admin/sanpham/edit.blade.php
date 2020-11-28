@@ -23,6 +23,12 @@
                                 </div>
                                 <div class="col-md-5 pr-1">
                                     <div class="form-group">
+                                        <label>Danh Mục </label>
+                                        <input type="text" class="form-control" name="DanhMuc" value="{{$sanpham->TenSP}}" >
+                                    </div>
+                                </div>
+                                <div class="col-md-5 pr-1">
+                                    <div class="form-group">
                                         <label for="exampleInputEmail1">Giá</label>
                                         <input type="text" name="Gia" class="form-control" value="{{$sanpham->Gia}}">
                                     </div>
@@ -56,6 +62,12 @@
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Số lượng</label>
                                         <input type="text" name="SoLuong" class="form-control" value="{{$sanpham->SoLuong}}">
+                                    </div>
+                                </div>
+                                <div class="col-md-5 pr-1">
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Mô tả</label>
+                                        <input type="text" name="MoTa" class="form-control" value="{{$sanpham->SoLuong}}">
                                     </div>
                                 </div>
                                 <div class="col-md-5 pr-1">

@@ -17,11 +17,13 @@
                                         <th> ID</th>
                                         <th  width="50%"> Tên Sản Phẩm</th>
                                         <th> Mã Loại</th>
+                                        <th>Danh Mục</th>
                                         <th>Giá</th>
                                         <th>Giá Mới</th>
                                         <th>Hình Ảnh</th>
                                         <th>Size</th>
                                         <th>Số Lượng</th>
+                                        <th>Mô tả</th>
                                         <th> Trạng Thái</th>
                                         <th width="70%">Tùy chọn</th>
                                     </tr>
@@ -31,11 +33,13 @@
                                             <td style="text-align:center">{{$sanpham->id}}</td>
                                             <td style="text-align:center">{{$sanpham->TenSP}}</td>
                                             <td style="text-align:center"> {{$sanpham->MaLoai}}</td>
+                                            <td style="text-align:center"> {{$sanpham->DanhMuc}}</td>
                                             <td style="text-align:center">{{number_format($sanpham->Gia)}}</td>
                                             <td style="text-align:center">{{number_format($sanpham->GiaMoi)}}</td>
                                             <td><img class="img-thumbnail" src="{{asset('image/'.$sanpham->Image)}}"></td>
                                             <td style="text-align:center">{{$sanpham->Size}}</td>
                                             <td style="text-align:center">{{$sanpham->SoLuong}}</td>
+                                            <td style="text-align:center">{{$sanpham->MoTa}}</td>
                                             <td style="text-align:center">{{$sanpham->TrangThai}}</td>
                                             <td>
                                             <form action="{{route('sanpham.destroy', $sanpham->id)}}" method="POST">

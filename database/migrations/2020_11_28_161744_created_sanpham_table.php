@@ -22,10 +22,13 @@ class CreatedSanphamTable extends Migration
             $table->string('Image')->nullable();
             $table->string('Size')->nullable();
             $table->integer('SoLuong')->nullable();
+            $table->string('Mota')->nullable();
             $table->Integer('TrangThai')->nullable();
             $table->timestamps();
             $table->integer('MaLoai')->unsigned()->nullable();
             $table->foreign('MaLoai')->references('id')->on('LoaiSP');
+            $table->integer('DanhMuc')->unsigned()->nullable();
+            $table->foreign('DanhMuc')->references('id')->on('danhmuc');
         });
     }
 

@@ -53,20 +53,24 @@ class SanPhamController extends Controller
         $this->validate($request, [
             'TenSP' => 'required',
             'MaLoai' => 'required',
+            'DanhMuc' => 'required',
             'Gia' => 'required',
             'GiaMoi' => 'required',
             'Image' => 'required',
             'Size' => 'required',
             'SoLuong'=>'required',
+            'MoTa'=>'required',
             'TrangThai'=>'required',
         ]);
         $sanpham->TenSP=$request->TenSP;
         $sanpham->MaLoai=$request->MaLoai;
+        $sanpham->DanhMuc=$request->DanhMuc;
         $sanpham->Gia=$request->Gia;
         $sanpham->GiaMoi=$request->GiaMoi;
         $sanpham->Image=$this->imageUpload($request);
         $sanpham->Size=$request->Size;
         $sanpham->SoLuong=$request->SoLuong;
+        $sanpham->MoTa=$request->MoTa;
         $sanpham->TrangThai=$request->TrangThai;
         //if(Category::create($request->all()))
         if($sanpham->save())
@@ -96,11 +100,13 @@ class SanPhamController extends Controller
         $data=$request->validate([
             'TenSP' => 'required',
             'MaLoai' => 'required',
+            'DanhMuc' => 'required',
             'Gia' => 'required',
             'GiaMoi' => 'required',
             'Image' => 'required',
             'Size' => 'required',
             'SoLuong'=>'required',
+            'MoTa'=>'required',
             'TrangThai'=>'required',
         ]);    
         
