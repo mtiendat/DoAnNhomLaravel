@@ -55,8 +55,10 @@
                         <a class="nav-link" href="{{route('danhmuc.index')}}">
                             <i class="nc-icon nc-bullet-list-67"></i>
                             <p>Danh Mục</p>
+                      </a>
+                      <li>
 
-                    <li class="nav-item active">
+                    <li >
                         <a class="nav-link" href="{{route('binhluan.index')}}">
                             <i class="nc-icon nc-pin-3"></i>
                             <p>Chi Tiết Bình Luận</p>
