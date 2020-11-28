@@ -52,6 +52,12 @@
                             <p>Chi Tiết Hóa Đơn</p>
                         </a>
                     </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{{route('binhluan.index')}}">
+                            <i class="nc-icon nc-pin-3"></i>
+                            <p>Chi Tiết Bình Luận</p>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
