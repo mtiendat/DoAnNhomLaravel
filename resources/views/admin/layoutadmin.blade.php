@@ -99,6 +99,12 @@
                             <p>Chi Tiết Hóa Đơn</p>
                         </a>
                     </li>
+                    <li>
+                        <a class="nav-link" href="{{route('danhmuc.index')}}">
+                            <i class="nc-icon nc-bullet-list-67"></i>
+                            <p>Danh Mục</p>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>

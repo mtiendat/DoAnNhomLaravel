@@ -8,13 +8,13 @@
                     </a>
                 </div>
                 <ul class="nav">
-                    <li>
+                    <li >
                         <a class="nav-link" href="{{route('home.index')}}">
                             <i class="nc-icon nc-chart-pie-35"></i>
                             <p>Home</p>
                         </a>
                     </li>
-                    <li>
+                    <li >
                         <a class="nav-link" href="{{route('sanpham.index')}}">
                             <i class="nc-icon nc-chart-pie-35"></i>
                             <p>Sản Phẩm</p>
@@ -38,21 +38,19 @@
                             <p>User</p>
                         </a>
                     </li>
-                    <li class="nav-item active">
-
-
+                    <li>
                         <a class="nav-link" href="{{route('hoadon.index')}}">
                             <i class="nc-icon nc-atom"></i>
                             <p>Hóa Đơn</p>
                         </a>
                     </li>
-                    <li>
+                    <li >
                         <a class="nav-link" href="{{route('chitiethoadon.index')}}">
                             <i class="nc-icon nc-pin-3"></i>
                             <p>Chi Tiết Hóa Đơn</p>
                         </a>
                     </li>
-                    <li>
+                    <li class="nav-item active">
                         <a class="nav-link" href="{{route('danhmuc.index')}}">
                             <i class="nc-icon nc-bullet-list-67"></i>
                             <p>Danh Mục</p>
@@ -65,7 +63,7 @@
             <!-- Navbar -->
             <nav class="navbar navbar-expand-lg " color-on-scroll="500">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="#pablo">Home </a>
+                    <a class="navbar-brand" href="#pablo">Danh Mục </a>
                     <button href="" class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-bar burger-lines"></span>
                         <span class="navbar-toggler-bar burger-lines"></span>
@@ -76,7 +74,7 @@
                             <li class="nav-item">
                                 <a href="#" class="nav-link" data-toggle="dropdown">
                                     <i class="nc-icon nc-palette"></i>
-                                    <span class="d-lg-none">Hóa Đơn</span>
+                                    <span class="d-lg-none">Danh Mục</span>
                                 </a>
                             </li>
                             <li class="dropdown nav-item">
