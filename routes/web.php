@@ -33,6 +33,7 @@ Route::resource('panel/hoadon',admin\HoaDonController::class);
 Route::resource('panel/chitiethoadon',admin\ChiTietHoaDonController::class);
 Route::resource('panel/danhmuc',admin\DanhMucController::class);
 Route::resource('panel/user',admin\UserController::class);
+Route::resource('panel/binhluan',admin\BinhLuanController::class);
 
 Route::get('panel/loaisp/splist/{id}', 'admin\LoaispController@splist')->name('loaisp.splist');
 Route::get('panel/nhacungcap/loaisplist/{id}','admin\NhaCungCapController@loaisplist')->name('nhacungcap.loaisplist');
