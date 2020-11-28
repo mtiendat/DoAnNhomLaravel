@@ -12,11 +12,13 @@ class SanPham extends Model
     protected $fillable = [
         'TenSP',
         'MaLoai',
+        'DanhMuc',
         'Gia',
         'GiaMoi',
         'Image',
         'Size',
         'SoLuong',
+        'MoTa',
         'TrangThai',
     ];
     public function loaisp()
