@@ -54,5 +54,9 @@ class PageController extends Controller
     public function contact(){
         return view($this->viewprefix.'contact');
     }
+    
+    public function single(){
+        return view($this->viewprefix.'single');
+    }
 
 }
