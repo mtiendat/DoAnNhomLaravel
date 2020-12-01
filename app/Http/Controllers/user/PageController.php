@@ -4,7 +4,7 @@ namespace App\Http\Controllers\user;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-
+use App\Models\SanPham;
 class PageController extends Controller
 {
     //
@@ -15,8 +15,8 @@ class PageController extends Controller
     }
     public function index()
     {
-
-        return view($this->viewprefix.'index');
+        $latesproducts = SanPham::where('DanhMuc',1)->paginate(3);
+        return view($this->viewprefix.'index',compact('latesproducts'));
     }
     public function index_single()
     {
@@ -55,8 +55,9 @@ class PageController extends Controller
         return view($this->viewprefix.'contact');
     }
     
-    public function single(){
-        return view($this->viewprefix.'single');
+    public function single(Request $request, $id){
+        $sanpham = SanPham::where('id',$request->id)->get();
+        return view($this->viewprefix.'single',compact('sanpham'));
     }
 
 }
