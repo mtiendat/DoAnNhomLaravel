@@ -39,7 +39,7 @@
                                             <td><img class="img-thumbnail" src="{{asset('image/'.$sanpham->Image)}}"></td>
                                             <td style="text-align:center">{{$sanpham->Size}}</td>
                                             <td style="text-align:center">{{$sanpham->SoLuong}}</td>
-                                            <td style="text-align:center">{{$sanpham->MoTa}}</td>
+                                            <td style="text-align:center">{{$sanpham->Mota}}</td>
                                             <td style="text-align:center">{{$sanpham->TrangThai}}</td>
                                             <td>
                                             <form action="{{route('sanpham.destroy', $sanpham->id)}}" method="POST">

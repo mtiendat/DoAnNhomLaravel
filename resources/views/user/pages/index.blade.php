@@ -4,8 +4,8 @@
 <div class="banner">
 	<div class="container">
 		<div class="banner_desc">
-			<h1>New Season Arrivals.</h1>
-			<h2>Check out all the new trends</h2>
+			<h1>NEW IPHONE 2020</h1>
+			<h2>APPLE</h2>
 			<div class="button">
 			      <a href="#" class="hvr-shutter-out-horizontal">Shop Now</a>
 			    </div>
@@ -18,45 +18,21 @@
 	   <div class="box_1">
 	       <div class="col-md-7">
 			    <div class="section group">
+					@foreach($latesproducts as $sanpham)
 						<div class="col_1_of_3 span_1_of_3 simpleCart_shelfItem">
 							<div class="shop-holder">
 		                         <div class="product-img">
 		                            <a href="single.html">
-		                                <img width="225" height="265" src="{!! asset('user/images/pic1.jpg') !!}" class="img-responsive"  alt="item4">		                            </a>
+		                                <img width="225" height="265" src="{!! asset('image/'.$sanpham->Image) !!}" class="img-responsive"  alt="item4">		                            </a>
 		                            <a href="" class="button item_add"></a>		                         </div>
 		                    </div>
 		                    <div class="shop-content" style="height: 80px;">
-		                            <div><a href="single.html" rel="tag">humour</a></div>
-		                            <h3><a href="single.html">Non-charac</a></h3>
-		                            <span class="amount item_price">$45.00</span>
+		                            <h3><a href="{{route('user.single', $sanpham->id)}}">{{$sanpham->TenSP}}</a></h3>
+									<del>{{$sanpham->Gia}}</del>
+		                            <span class="amount item_price">{{$sanpham->GiaMoi}} VND</span>
 		                    </div>
 						</div>
-						<div class="col_1_of_3 span_1_of_3 simpleCart_shelfItem">
-							<div class="shop-holder">
-		                         <div class="product-img">
-		                            <a href="single.html">
-		                                <img width="225" height="265" src="{!! asset('user/images/pic2.jpg') !!}" class="img-responsive"  alt="item4">		                            </a>
-		                            <a href="" class="button item_add"></a>		                         </div>
-		                    </div>
-		                    <div class="shop-content" style="height: 80px;">
-		                            <div><a href="single.html" rel="tag">humour</a></div>
-		                            <h3><a href="single.html">Non-charac</a></h3>
-		                            <span class="amount item_price">$45.00</span>
-		                    </div>
-						</div>
-						<div class="col_1_of_3 span_1_of_3 simpleCart_shelfItem">
-							<div class="shop-holder">
-		                         <div class="product-img">
-		                            <a href="single.html">
-		                                <img width="225" height="265" src="{!! asset('user/images/pic3.jpg') !!}" class="img-responsive"  alt="item4">		                            </a>
-		                           <a href="" class="button item_add"></a>	                         </div>
-		                    </div>
-		                    <div class="shop-content" style="height: 80px;">
-		                            <div><a href="single.html" rel="tag">humour</a></div>
-		                            <h3><a href="single.html">Non-charac</a></h3>
-		                            <span class="amount item_price">$45.00</span>
-		                    </div>
-						</div>
+						@endforeach
 						<div class="clearfix"></div> 
 				</div>
 		</div>
@@ -75,7 +51,7 @@
 </div>
 <div class="content_bottom">
 <div class="container">
-	<h2 class="m_3">From the Blog</h2>
+	<h2 class="m_3">NEW PRODUCT</h2>
 	<div class="grid_1">
 		<div class="col-md-6 blog_1"><a href="index_single.html">
 			<div class="item-inner"> 

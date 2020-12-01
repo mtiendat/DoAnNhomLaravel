@@ -24,7 +24,7 @@
                     </div>
                     <div class="col-xs-6 menu">
                         <ul class="megamenu skyblue">
-                          <li class="active grid"><a class="color1" href="index.html">Men</a><div class="megapanel">
+                          <li class="active grid"><a class="color1" href="{{route('user.men',1)}}">Smartphone</a><div class="megapanel">
                             <div class="row">
                                 <div class="col1">
                                     <div class="h_nav">
@@ -79,7 +79,7 @@
                               </div>
                             </div>
                         </li>
-                        <li class="grid"><a class="color2" href="#">Women</a>
+                        <li class="grid"><a class="color2" href="{{route('user.men',1)}}">Laptop</a>
                           <div class="megapanel">
                             <div class="row">
                                 <div class="col1">
