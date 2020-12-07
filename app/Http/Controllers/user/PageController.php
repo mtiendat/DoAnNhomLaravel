@@ -55,9 +55,10 @@ class PageController extends Controller
         return view($this->viewprefix.'contact');
     }
     
-    public function single(Request $request, $id){
-        $sanpham = SanPham::where('id',$request->id)->get();
-        return view($this->viewprefix.'single',compact('sanpham'));
+    public function single(Request $request){
+        $sanpham = SanPham::where('id',$request->id)->first();
+        $sanpham_lienquan=SanPham::where('MaLoai', $sanpham->MaLoai)->paginate(4);
+        return view($this->viewprefix.'single',compact('sanpham','sanpham_lienquan'));
     }
 
 }
