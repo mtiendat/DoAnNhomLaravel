@@ -45,7 +45,7 @@ Route::group(['prefix' => 'user', 'namespace' => 'user'], function() {
     Route::get('about','PageController@about')->name('user.about');
     Route::get('checkout','PageController@checkout')->name('user.checkout');
     Route::get('contact','PageController@contact')->name('user.contact');
-	Route::get('men','PageController@men')->name('user.men');
+	Route::get('smartphone/{id}','PageController@smartphone')->name('user.smartphone');
 	Route::get('register','PageController@register')->name('user.register');
 	Route::get('login','PageController@login')->name('user.login');
 	Route::get('single/{id}','PageController@login')->name('user.single');

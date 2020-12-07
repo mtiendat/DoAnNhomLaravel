@@ -18,7 +18,7 @@
 		<!-- grids_of_4 -->
 		<div class="grids_of_4">
 		  <div class="grid1_of_4 simpleCart_shelfItem">
-				<div class="content_box"><a href="{{route('user.single')}}">
+				<div class="content_box"><a href="{{route('user.single',1,1)}}">
 			   	  <div class="view view-fifth">
 			   	   	 <img src="{!! asset('user\images/1.jpg')!!}" class="img-responsive" alt=""/>
 				   	   	<div class="mask1">
@@ -26,7 +26,7 @@
 			            </div>
 				   	  </a>
 				   </div>
-				    <h5><a href="{{route('user.single')}}"> Duis autem</a></h5>
+				    <h5><a href="{{route('user.single',1,1)}}"> Duis autem</a></h5>
 				    <h6>It is a long establishe</h6>
 				     <div class="size_1">
 				     	<span class="item_price">$187.95</span>
@@ -48,7 +48,7 @@
 			     </div>
 			</div>
 			<div class="grid1_of_4 simpleCart_shelfItem">
-				<div class="content_box"><a href="{{route('user.single')}}">
+				<div class="content_box"><a href="{{route('user.single',1,1)}}">
 			   	  <div class="view view-fifth">
 			   	   	 <img src="{!! asset('user\images/2.jpg')!!}" class="img-responsive" alt=""/>
 				   	   	<div class="mask1">
@@ -56,7 +56,7 @@
 			            </div>
 				   	  </a>
 				   </div>
-				    <h5><a href="{{route('user.single')}}"> Duis autem</a></h5>
+				    <h5><a href="{{route('user.single',1,1)}}"> Duis autem</a></h5>
 				    <h6>It is a long establishe</h6>
 				     <div class="size_1">
 				     	<span class="item_price">$187.95</span>
@@ -78,7 +78,7 @@
 			     </div>
 			</div>
 			<div class="grid1_of_4 simpleCart_shelfItem">
-				<div class="content_box"><a href="{{route('user.single')}}">
+				<div class="content_box"><a href="{{route('user.single',1,1)}}">
 			   	  <div class="view view-fifth">
 			   	   	 <img src="{!! asset('user\images/3.jpg')!!}" class="img-responsive" alt=""/>
 				   	   	<div class="mask1">
@@ -86,7 +86,7 @@
 			            </div>
 				   	  </a>
 				   </div>
-				    <h5><a href="{{route('user.single')}}"> Duis autem</a></h5>
+				    <h5><a href="{{route('user.single',1,1)}}"> Duis autem</a></h5>
 				    <h6>It is a long establishe</h6>
 				     <div class="size_1">
 				     	<span class="item_price">$187.95</span>
@@ -108,7 +108,7 @@
 			     </div>
 			</div>
 			<div class="grid1_of_4 simpleCart_shelfItem">
-				<div class="content_box"><a href="{{route('user.single')}}">
+				<div class="content_box"><a href="{{route('user.single',1,1)}}">
 			   	  <div class="view view-fifth">
 			   	   	 <img src="{!! asset('user\images/4.jpg')!!}" class="img-responsive" alt=""/>
 				   	   	<div class="mask1">
@@ -116,7 +116,7 @@
 			            </div>
 				   	  </a>
 				   </div>
-				    <h5><a href="{{route('user.single')}}"> Duis autem</a></h5>
+				    <h5><a href="{{route('user.single',1)}}"> Duis autem</a></h5>
 				    <h6>It is a long establishe</h6>
 				     <div class="size_1">
 				     	<span class="item_price">$187.95</span>
@@ -141,7 +141,7 @@
 		</div>
 		<div class="grids_of_4">
 		  <div class="grid1_of_4 simpleCart_shelfItem">
-				<div class="content_box"><a href="{{route('user.single')}}">
+				<div class="content_box"><a href="{{route('user.single',1,1)}}">
 			   	  <div class="view view-fifth">
 			   	   	 <img src="{!! asset('user\images/5.jpg')!!}" class="img-responsive" alt=""/>
 				   	   	<div class="mask1">
@@ -149,7 +149,7 @@
 			            </div>
 				   	  </a>
 				   </div>
-				    <h5><a href="{{route('user.single')}}"> Duis autem</a></h5>
+				    <h5><a href="{{route('user.single',1)}}"> Duis autem</a></h5>
 				    <h6>It is a long establishe</h6>
 				     <div class="size_1">
 				     	<span class="item_price">$187.95</span>
@@ -171,7 +171,7 @@
 			     </div>
 			</div>
 			<div class="grid1_of_4 simpleCart_shelfItem">
-				<div class="content_box"><a href="{{route('user.single')}}">
+				<div class="content_box"><a href="{{route('user.single',1,1)}}">
 			   	  <div class="view view-fifth">
 			   	   	 <img src="{!! asset('user\images/6.jpg')!!}" class="img-responsive" alt=""/>
 				   	   	<div class="mask1">
@@ -179,7 +179,7 @@
 			            </div>
 				   	  </a>
 				   </div>
-				    <h5><a href="{{route('user.single')}}"> Duis autem</a></h5>
+				    <h5><a href="{{route('user.single',1)}}"> Duis autem</a></h5>
 				    <h6>It is a long establishe</h6>
 				     <div class="size_1">
 				     	<span class="item_price">$187.95</span>
@@ -201,7 +201,7 @@
 			     </div>
 			</div>
 			<div class="grid1_of_4 simpleCart_shelfItem">
-				<div class="content_box"><a href="{{route('user.single')}}">
+				<div class="content_box"><a href="{{route('user.single',1,1)}}">
 			   	  <div class="view view-fifth">
 			   	   	 <img src="{!! asset('user\images/7.jpg')!!}" class="img-responsive" alt=""/>
 				   	   	<div class="mask1">
@@ -209,7 +209,7 @@
 			            </div>
 				   	  </a>
 				   </div>
-				    <h5><a href="{{route('user.single')}}"> Duis autem</a></h5>
+				    <h5><a href="{{route('user.single',1,1)}}"> Duis autem</a></h5>
 				    <h6>It is a long establishe</h6>
 				     <div class="size_1">
 				     	<span class="item_price">$187.95</span>
@@ -231,7 +231,7 @@
 			     </div>
 			</div>
 			<div class="grid1_of_4 simpleCart_shelfItem">
-				<div class="content_box"><a href="{{route('user.single')}}">
+				<div class="content_box"><a href="{{route('user.single',1)}}">
 			   	  <div class="view view-fifth">
 			   	   	 <img src="{!! asset('user\images/8.jpg')!!}" class="img-responsive" alt=""/>
 				   	   	<div class="mask1">
@@ -239,7 +239,7 @@
 			            </div>
 				   	  </a>
 				   </div>
-				    <h5><a href="{{route('user.single')}}"> Duis autem</a></h5>
+				    <h5><a href="{{route('user.single',1)}}"> Duis autem</a></h5>
 				    <h6>It is a long establishe</h6>
 				     <div class="size_1">
 				     	<span class="item_price">$187.95</span>
@@ -264,7 +264,7 @@
 		</div>
 		<div class="grids_of_4">
 		  <div class="grid1_of_4 simpleCart_shelfItem">
-				<div class="content_box"><a href="{{route('user.single')}}">
+				<div class="content_box"><a href="{{route('user.single',1)}}">
 			   	  <div class="view view-fifth">
 			   	   	 <img src="{!! asset('user\images/9.jpg')!!}" class="img-responsive" alt=""/>
 				   	   	<div class="mask1">
@@ -272,7 +272,7 @@
 			            </div>
 				   	  </a>
 				   </div>
-				    <h5><a href="{{route('user.single')}}"> Duis autem</a></h5>
+				    <h5><a href="{{route('user.single',1)}}"> Duis autem</a></h5>
 				    <h6>It is a long establishe</h6>
 				     <div class="size_1">
 				     	<span class="item_price">$187.95</span>
@@ -294,7 +294,7 @@
 			     </div>
 			</div>
 			<div class="grid1_of_4 simpleCart_shelfItem">
-				<div class="content_box"><a href="{{route('user.single')}}">
+				<div class="content_box"><a href="{{route('user.single',1)}}">
 			   	  <div class="view view-fifth">
 			   	   	 <img src="{!! asset('user\images/10.jpg')!!}" class="img-responsive" alt=""/>
 				   	   	<div class="mask1">
@@ -302,7 +302,7 @@
 			            </div>
 				   	  </a>
 				   </div>
-				    <h5><a href="{{route('user.single')}}"> Duis autem</a></h5>
+				    <h5><a href="{{route('user.single',1)}}"> Duis autem</a></h5>
 				    <h6>It is a long establishe</h6>
 				     <div class="size_1">
 				     	<span class="item_price">$187.95</span>
@@ -324,7 +324,7 @@
 			     </div>
 			</div>
 			<div class="grid1_of_4 simpleCart_shelfItem">
-				<div class="content_box"><a href="{{route('user.single')}}">
+				<div class="content_box"><a href="{{route('user.single',1)}}">
 			   	  <div class="view view-fifth">
 			   	   	 <img src="{!! asset('user\images/13.jpg')!!}" class="img-responsive" alt=""/>
 				   	   	<div class="mask1">
@@ -332,7 +332,7 @@
 			            </div>
 				   	  </a>
 				   </div>
-				    <h5><a href="{{route('user.single')}}"> Duis autem</a></h5>
+				    <h5><a href="{{route('user.single',1)}}"> Duis autem</a></h5>
 				    <h6>It is a long establishe</h6>
 				     <div class="size_1">
 				     	<span class="item_price">$187.95</span>
@@ -354,7 +354,7 @@
 			     </div>
 			</div>
 			<div class="grid1_of_4 simpleCart_shelfItem">
-				<div class="content_box"><a href="{{route('user.single')}}">
+				<div class="content_box"><a href="{{route('user.single',1)}}">
 			   	  <div class="view view-fifth">
 			   	   	 <img src="{!! asset('user\images/12.jpg')!!}" class="img-responsive" alt=""/>
 				   	   	<div class="mask1">
@@ -362,7 +362,7 @@
 			            </div>
 				   	  </a>
 				   </div>
-				    <h5><a href="{{route('user.single')}}"> Duis autem</a></h5>
+				    <h5><a href="{{route('user.single',1)}}"> Duis autem</a></h5>
 				    <h6>It is a long establishe</h6>
 				     <div class="size_1">
 				     	<span class="item_price">$187.95</span>

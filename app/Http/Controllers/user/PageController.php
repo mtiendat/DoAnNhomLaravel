@@ -30,10 +30,10 @@ class PageController extends Controller
         return view($this->viewprefix.'about');
     }
 
-    public function men()
+    public function smartphone()
     {
 
-        return view($this->viewprefix.'men');
+        return view($this->viewprefix.'smartphone');
     }
     public function register()
     {
