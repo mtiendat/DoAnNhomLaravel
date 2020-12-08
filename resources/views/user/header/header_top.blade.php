@@ -79,7 +79,7 @@
                               </div>
                             </div>
                         </li>
-                        <li class="grid"><a class="color2" href="{{route('user.smartphone',1)}}">Laptop</a>
+                        <li class="grid"><a class="color2" href="{{route('user.laptop',1)}}">Laptop</a>
                           <div class="megapanel">
                             <div class="row">
                                 <div class="col1">

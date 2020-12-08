@@ -50,7 +50,10 @@ class PageController extends Controller
     {
         return view($this->viewprefix.'checkout');
     }
-
+    public function laptop(){
+    $laptop = SanPham::where('MaLoai',3)->orwhere('MaLoai',4)->get();
+    return view($this->viewprefix.'laptop',compact('laptop'));
+   }
     public function contact(){
         return view($this->viewprefix.'contact');
     }
