@@ -45,12 +45,14 @@ Route::group(['prefix' => 'user', 'namespace' => 'user'], function() {
     Route::get('about','PageController@about')->name('user.about');
     Route::get('checkout','PageController@checkout')->name('user.checkout');
     Route::get('contact','PageController@contact')->name('user.contact');
-	Route::get('men','PageController@men')->name('user.men');
+	Route::get('smartphone/{id}','PageController@smartphone')->name('user.smartphone');
 	Route::get('register','PageController@register')->name('user.register');
 	Route::get('login','PageController@login')->name('user.login');
     Route::get('single','PageController@single')->name('user.single');
-    
+
     Route::get('smartphone','PageController@smartphone')->name('user.smartphone');
+	Route::get('laptop','PageController@laptop')->name('user.laptop');
+	Route::get('single/{id}','PageController@single')->name('user.single');
 
 });
 

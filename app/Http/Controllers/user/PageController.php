@@ -31,7 +31,7 @@ class PageController extends Controller
         return view($this->viewprefix.'about');
     }
 
-    public function men()
+    public function smartphone()
     {
 
         return view($this->viewprefix.'smartphone');
@@ -51,14 +51,25 @@ class PageController extends Controller
     {
         return view($this->viewprefix.'checkout');
     }
-
+    public function laptop(){
+    $laptop = SanPham::where('MaLoai',3)->orwhere('MaLoai',4)->get();
+    return view($this->viewprefix.'laptop',compact('laptop'));
+   }
     public function contact(){
         return view($this->viewprefix.'contact');
     }
 
+
     public function single(Request $request, $id){
         $sanpham = SanPham::where('id',$request->id)->get();
         return view($this->viewprefix.'single',compact('sanpham'));
+    }
+
+    public function single(Request $request){
+        $sanpham = SanPham::where('id',$request->id)->first();
+        $sanpham_lienquan=SanPham::where('MaLoai', $sanpham->MaLoai)->paginate(4);
+        return view($this->viewprefix.'single',compact('sanpham','sanpham_lienquan'));
+
     }
 
     public function smartphone(){
