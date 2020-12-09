@@ -13,7 +13,7 @@
 				</ul>
 				<div class="clearfix"></div>
 			</div>
-			<div class="desc1 span_3_of_2">	
+			<div class="desc1 span_3_of_2">
 				<h1>{{$sanpham->TenSP}}</h1>
 				<p>{{$sanpham->Mota}}</p>
 				<div class="dropdown_top">
@@ -21,10 +21,10 @@
 						<select class="dropdown" tabindex="10" data-settings='{"wrapperClass":"metro1"}'>
 							<option value="0">Select size</option>
 							<option value="1">{{$sanpham->Size}}</option>
-							
+
 						</select>
 					</div>
-			
+
 					<div class="clearfix"></div>
 				</div>
 				<div class="simpleCart_shelfItem">
@@ -42,7 +42,7 @@
 			</div>
 			<div class="clearfix"></div>
 		</div>
-		<div class="single_social_top">	
+		<div class="single_social_top">
 		</div>
 		<ul class="menu_drop">
 			<li class="item1"><a href="#"><img src="images/product_arrow.png">REVIEW</a>

@@ -5,12 +5,17 @@
             <div class="one-fifth column row_1">
                 <span class="selection-box"><select class="domains valid" name="domains">
                    <option>English</option>
-                   
+
                 </select></span>
              </div>
              <div class="cssmenu">
                 <ul>
-                   <li class="active"><a href="{{route('user.login')}}">My Account</a></li>
+                        @if(Auth::check())
+                            <li><a href="">Hello: {{Auth::user()->name}}</a></li>
+                            <li><a href="{{route('user.logout')}}"><b>Đăng xuất</b></a></li>
+                        @else
+                            <li class="active"><a href="{{route('user.login')}}">My Account</a></li>
+                        @endif
                 </ul>
              </div>
         </div>
@@ -25,7 +30,7 @@
                         <ul class="megamenu skyblue">
 
                           <li class="active grid"><a class="color1" href="{{route('user.smartphone')}}">Smartphone</a><div class="megapanel">
-                        
+
 
                             <div class="row">
                                 <div class="col1">
@@ -71,7 +76,7 @@
                               </div>
                             </div>
                         </li>
-                    
+
                         <li class="grid"><a class="color2" href="{{route('user.laptop')}}">Laptop</a>
 
                           <div class="megapanel">

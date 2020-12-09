@@ -27,7 +27,8 @@ class User extends Authenticatable
         'sdt',
         'email',
         'loai',
-        'trangthai'
+        'trangthai',
+        'status',
     ];
 
     /**
