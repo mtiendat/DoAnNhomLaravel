@@ -26,7 +26,7 @@
                         <ul class="megamenu skyblue">
 
                           <li class="active grid"><a class="color1" href="{{route('user.smartphone')}}">Smartphone</a><div class="megapanel">
-                          <li class="active grid"><a class="color1" href="{{route('user.smartphone',1)}}">Smartphone</a><div class="megapanel">
+                        
 
                             <div class="row">
                                 <div class="col1">
@@ -72,9 +72,8 @@
                               </div>
                             </div>
                         </li>
-                        <li class="grid"><a class="color2" href="{{route('user.smartphone')}}">Laptop</a>
-
-                        <li class="grid"><a class="color2" href="{{route('user.laptop',1)}}">Laptop</a>
+                    
+                        <li class="grid"><a class="color2" href="{{route('user.laptop')}}">Laptop</a>
 
                           <div class="megapanel">
                             <div class="row">
