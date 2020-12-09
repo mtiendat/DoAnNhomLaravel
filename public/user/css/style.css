@@ -182,7 +182,7 @@ body a{
 	font-size: 1.5em;
 	color:#000;
 	line-height: 1.8em;
-	text-transform:uppercase
+	text-transform:uppercase;
 	margin-bottom: 4%;
 }
 .h_nav h4.top{
@@ -537,7 +537,7 @@ h2.m_3 {
 	border:1px solid #f54d56;
 }
 .row_4{
-	background: url(../images/pic10.jpg) no-repeat center top;
+	background: url(../images/789.jpg) no-repeat center top;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -2678,7 +2678,7 @@ ul.single_social li {
 }
 @media (max-width:736px){
 .header-bottom-left {
-  width: 100%% !important;
+  width: 100% !important;
 }
 .col-xs-4.header-bottom-right {
   width: 100%;
@@ -2720,7 +2720,6 @@ ul.single_social {
 }
 a.order {
   margin: 2em 0;
-}
 }
 @media (max-width:568px){
 .logo {
@@ -2854,13 +2853,13 @@ li.middle {
 	padding:0 10px !important;
 }
 .header-bottom-left {
-  width: 100%% !important;
+  width: 100% !important;
 }
 .one-fifth select {
   padding: 5px 0px 5px 0;
 }
 .header-bottom-left {
-  width: 100%% !important;
+  width: 100% !important;
   padding: 0 !important;
 }
 .menu {
@@ -3011,5 +3010,4 @@ ul#etalage {
 a.b-home {
  padding: 0.3em 0.5em;
 }
-}
-
+}}

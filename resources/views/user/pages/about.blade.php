@@ -37,41 +37,20 @@
 	  	</div>
 	  	<div class="clearfix"> </div>
 	  </div>
+
    <h3 class="m_2">Related Products</h3>
          <div class="container">
           		<div class="box_3">
+					  @foreach($relatedproduct as $product)
           			<div class="col-md-3">
-          				<div class="content_box"><a href="{{route('user.single')}}">
-			   	          <img src="{!! asset('user/images/pic6.jpg')!!}" class="img-responsive" alt="">
+          				<div class="content_box"><a href="{{route('user.single',$product->id)}}">
+			   	          <img src="{!! asset('image/'.$product->Image)!!}" class="img-responsive" alt="">
 				   	   </a>
 				   </div>
-				    <h4><a href="{{route('user.single')}}">Contrary to popular belief</a></h4>
-				    <p>$ 199</p>
+				    <h4><a href="{{route('user.single',$product->id)}}">{{$product->TenSP}}</a></h4>
+				    <p>$ {{$product->GiaMoi}}</p>
 			        </div>
-          			<div class="col-md-3">
-          				<div class="content_box"><a href="{{route('user.single')}}">
-			   	          <img src="{!! asset('user/images/pic2.jpg')!!}" class="img-responsive" alt="">
-				   	   </a>
-				   </div>
-				    <h4><a href="{{route('user.single')}}">Contrary to popular belief</a></h4>
-				    <p>$ 199</p>
-			        </div>
-          			<div class="col-md-3">
-          				<div class="content_box"><a href="{{route('user.single')}}">
-			   	          <img src="{!! asset('user/images/pic4.jpg')!!}" class="img-responsive" alt="">
-				   	   </a>
-				   </div>
-				    <h4><a href="{{route('user.single')}}">Contrary to popular belief</a></h4>
-				    <p>$ 199</p>
-			        </div>
-          			<div class="col-md-3">
-          				<div class="content_box"><a href="{{route('user.single')}}">
-			   	          <img src="{!! asset('user/images/pic5.jpg')!!}" class="img-responsive" alt="">
-				   	   </a>
-				   </div>
-				    <h4><a href="{{route('user.single')}}">Contrary to popular belief</a></h4>
-				    <p>$ 199</p>
-			        </div>
+          			@endforeach
 			        <div class="clearfix"> </div>
           		</div>
           	</div>

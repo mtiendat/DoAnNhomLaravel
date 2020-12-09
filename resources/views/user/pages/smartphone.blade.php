@@ -22,7 +22,7 @@
         @foreach($smartphone as $smart)
 		<div class="grids_of_4">
 		  <div class="grid1_of_4 simpleCart_shelfItem">
-				<div class="content_box"><a href="">
+				<div class="content_box"><a href="{{route('user.single',$smart->id)}}">
 			   	  <div class="view view-fifth">
 			   	   	 <img src="{!! asset('image/'.$smart->Image) !!}" height="10px" class="img-responsive" alt=""/>
 				   	   	<div class="mask1">
@@ -31,17 +31,13 @@
 				   	  </a>
 				   </div>
 
-				    <h5><a href=""> {{$smart->TenSP}}</a></h5>
+				    <h5><a href="{{route('user.single',$smart->id)}}"> {{$smart->TenSP}}</a></h5>
 				    <h6>{{$smart->MoTa}}</h6>
-				    <h5><a href="{{route('user.single',1,1)}}"> Duis autem</a></h5>
-				    <h6>It is a long establishe</h6>
 				     <div class="size_1">
-				     	<span class="item_price">$187.95</span>
+				     	<span class="item_price">{{$smart->GiaMoi}}</span>
 				       <select class="item_Size">
-						<option value="Small">L</option>
-						<option value="Medium">S</option>
-						<option value="Large">M</option>
-						<option value="Large">XL</option>
+						<option value="Small">{{$smart->Size}}</option>
+						
 		      		    </select>
 		      		    <div class="clearfix"></div>
 		      		  </div>

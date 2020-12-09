@@ -40,10 +40,10 @@
 			<div class="about-block-content">
 		       <div class="border-add"></div>
 				<h4>About Us</h4>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati beatae quam voluptatibus deleniti ipsa consequatur!</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+				<p>We guarantee 100% genuine products!</p>
+				<p>The best price is always.</p>
 				<p>		        	</p></div>
-				<img src="{!! asset('user/images/pic9.jpg') !!}" class="img-responsive" alt=""/>
+				<img src="{!! asset('user/images/246.jpg') !!}" class="img-responsive" alt=""/>
 	    </div>
 		<div class="clearfix"></div>
 	</div>
@@ -55,9 +55,9 @@
 	<div class="grid_1">
 		<div class="col-md-6 blog_1"><a href="index_single.html">
 			<div class="item-inner"> 
-				<img src="{!! asset('image/'.$sanpham->Image) !!}" class="img-responsive" alt=""/>																	
+				<img src="{!! asset('image/123.jpg') !!}" class="img-responsive" alt=""/>																	
 					<div class="date-comments">
-						<div class="time"><span class="date"><span class="word1">14</span> <span class="word2">Jan</span> </span></div>											 
+						<div class="time"><span class="date"><span class="word1">15</span> <span class="word2">SEP</span> </span></div>											 
 						<div class="comments">
 						<span><span class="word1">0</span>
 						<span class="word2">comment</span></span>
@@ -67,9 +67,9 @@
 		</a></div>
 		<div class="col-md-6 row_2"><a href="index_single.html">
 			<div class="item-inner"> 
-				<img src="{!! asset('image/'.$sanpham->Image) !!}" class="img-responsive" alt=""/>																	
+				<img src="{!! asset('image/456.jpg') !!}" class="img-responsive" alt=""/>																	
 					<div class="date-comments">
-						<div class="time"><span class="date"><span class="word1">14</span> <span class="word2">Jan</span> </span></div>											 
+						<div class="time"><span class="date"><span class="word1">14</span> <span class="word2">Oct</span> </span></div>											 
 						<div class="comments">
 						<span><span class="word1">0</span>
 						<span class="word2">comment</span></span>
