@@ -31,11 +31,7 @@ class PageController extends Controller
         return view($this->viewprefix.'about');
     }
 
-    public function smartphone()
-    {
 
-        return view($this->viewprefix.'smartphone');
-    }
     public function register()
     {
 
@@ -59,11 +55,6 @@ class PageController extends Controller
         return view($this->viewprefix.'contact');
     }
 
-
-    public function single(Request $request, $id){
-        $sanpham = SanPham::where('id',$request->id)->get();
-        return view($this->viewprefix.'single',compact('sanpham'));
-    }
 
     public function single(Request $request){
         $sanpham = SanPham::where('id',$request->id)->first();
