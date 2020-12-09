@@ -1,6 +1,8 @@
 @extends('user.layout')
 @section('content')
 <div class="container">
+
+
 <div class="women_main">
 	<div class="col-md-9 w_content">
 	    <div class="women">
@@ -10,36 +12,38 @@
 		     			<li><a class="active" href="#">popular</a></li> |
 		     			<li><a href="#">new </a></li> |
 		     			<li><a href="#">discount</a></li> |
-		     			<li><a href="#">price: Low High </a></li> 
-		     			<div class="clear"></div>	
+		     			<li><a href="#">price: Low High </a></li>
+		     			<div class="clear"></div>
 		     </ul>
-		     <div class="clearfix"></div>	
+		     <div class="clearfix"></div>
 		</div>
-		<!-- grids_of_4 -->
+        <!-- grids_of_4 -->
+
+        @foreach($smartphone as $smart)
 		<div class="grids_of_4">
 		  <div class="grid1_of_4 simpleCart_shelfItem">
 				<div class="content_box"><a href="{{route('user.single')}}">
 			   	  <div class="view view-fifth">
-			   	   	 <img src="{!! asset('user\images/1.jpg')!!}" class="img-responsive" alt=""/>
+			   	   	 <img src="{!! asset('image/'.$smart->Image) !!}" height="10px" class="img-responsive" alt=""/>
 				   	   	<div class="mask1">
 	                        <div class="info"> </div>
 			            </div>
 				   	  </a>
 				   </div>
-				    <h5><a href="{{route('user.single')}}"> Duis autem</a></h5>
-				    <h6>It is a long establishe</h6>
+				    <h5><a href="{{route('user.single')}}"> {{$smart->TenSP}}</a></h5>
+				    <h6>{{$smart->MoTa}}</h6>
 				     <div class="size_1">
-				     	<span class="item_price">$187.95</span>
+				     	<span class="item_price">{{$smart->Gia}}</span>
 				       <select class="item_Size">
 						<option value="Small">L</option>
 						<option value="Medium">S</option>
-						<option value="Large">M</option>	
-						<option value="Large">XL</option>	
+						<option value="Large">M</option>
+						<option value="Large">XL</option>
 		      		    </select>
 		      		    <div class="clearfix"></div>
 		      		  </div>
 		      		  <div class="size_2">
-		      		    <div class="size_2-left"> 
+		      		    <div class="size_2-left">
 					       <input type="text" class="item_quantity quantity_1" value="1" />
 					    </div>
 			    	    <div class="size_2-right"><input type="button" class="item_add add3" value="" /></div>
@@ -47,96 +51,8 @@
 			    	 </div>
 			     </div>
 			</div>
-			<div class="grid1_of_4 simpleCart_shelfItem">
-				<div class="content_box"><a href="{{route('user.single')}}">
-			   	  <div class="view view-fifth">
-			   	   	 <img src="{!! asset('user\images/2.jpg')!!}" class="img-responsive" alt=""/>
-				   	   	<div class="mask1">
-	                        <div class="info"> </div>
-			            </div>
-				   	  </a>
-				   </div>
-				    <h5><a href="{{route('user.single')}}"> Duis autem</a></h5>
-				    <h6>It is a long establishe</h6>
-				     <div class="size_1">
-				     	<span class="item_price">$187.95</span>
-				       <select class="item_Size">
-						<option value="Small">L</option>
-						<option value="Medium">S</option>
-						<option value="Large">M</option>	
-						<option value="Large">XL</option>	
-		      		    </select>
-		      		    <div class="clearfix"></div>
-		      		  </div>
-		      		  <div class="size_2">
-		      		    <div class="size_2-left"> 
-					       <input type="text" class="item_quantity quantity_1" value="1" />
-					    </div>
-			    	    <div class="size_2-right"><input type="button" class="item_add add3" value="" /></div>
-			    	    <div class="clearfix"> </div>
-			    	 </div>
-			     </div>
-			</div>
-			<div class="grid1_of_4 simpleCart_shelfItem">
-				<div class="content_box"><a href="{{route('user.single')}}">
-			   	  <div class="view view-fifth">
-			   	   	 <img src="{!! asset('user\images/3.jpg')!!}" class="img-responsive" alt=""/>
-				   	   	<div class="mask1">
-	                        <div class="info"> </div>
-			            </div>
-				   	  </a>
-				   </div>
-				    <h5><a href="{{route('user.single')}}"> Duis autem</a></h5>
-				    <h6>It is a long establishe</h6>
-				     <div class="size_1">
-				     	<span class="item_price">$187.95</span>
-				       <select class="item_Size">
-						<option value="Small">L</option>
-						<option value="Medium">S</option>
-						<option value="Large">M</option>	
-						<option value="Large">XL</option>	
-		      		    </select>
-		      		    <div class="clearfix"></div>
-		      		  </div>
-		      		  <div class="size_2">
-		      		    <div class="size_2-left"> 
-					       <input type="text" class="item_quantity quantity_1" value="1" />
-					    </div>
-			    	    <div class="size_2-right"><input type="button" class="item_add add3" value="" /></div>
-			    	    <div class="clearfix"> </div>
-			    	 </div>
-			     </div>
-			</div>
-			<div class="grid1_of_4 simpleCart_shelfItem">
-				<div class="content_box"><a href="{{route('user.single')}}">
-			   	  <div class="view view-fifth">
-			   	   	 <img src="{!! asset('user\images/4.jpg')!!}" class="img-responsive" alt=""/>
-				   	   	<div class="mask1">
-	                        <div class="info"> </div>
-			            </div>
-				   	  </a>
-				   </div>
-				    <h5><a href="{{route('user.single')}}"> Duis autem</a></h5>
-				    <h6>It is a long establishe</h6>
-				     <div class="size_1">
-				     	<span class="item_price">$187.95</span>
-				       <select class="item_Size">
-						<option value="Small">L</option>
-						<option value="Medium">S</option>
-						<option value="Large">M</option>	
-						<option value="Large">XL</option>	
-		      		    </select>
-		      		    <div class="clearfix"></div>
-		      		  </div>
-		      		  <div class="size_2">
-		      		    <div class="size_2-left"> 
-					       <input type="text" class="item_quantity quantity_1" value="1" />
-					    </div>
-			    	   <div class="size_2-right"><input type="button" class="item_add add3" value="" /></div>
-			    	    <div class="clearfix"> </div>
-			    	 </div>
-			   	</div>
-			</div>
+         @endforeach
+
 			<div class="clearfix"></div>
 		</div>
 		<div class="grids_of_4">
@@ -156,13 +72,13 @@
 				       <select class="item_Size">
 						<option value="Small">L</option>
 						<option value="Medium">S</option>
-						<option value="Large">M</option>	
-						<option value="Large">XL</option>	
+						<option value="Large">M</option>
+						<option value="Large">XL</option>
 		      		    </select>
 		      		    <div class="clearfix"></div>
 		      		  </div>
 		      		  <div class="size_2">
-		      		    <div class="size_2-left"> 
+		      		    <div class="size_2-left">
 					       <input type="text" class="item_quantity quantity_1" value="1" />
 					    </div>
 			    	    <div class="size_2-right"><input type="button" class="item_add add3" value="" /></div>
@@ -186,13 +102,13 @@
 				       <select class="item_Size">
 						<option value="Small">L</option>
 						<option value="Medium">S</option>
-						<option value="Large">M</option>	
-						<option value="Large">XL</option>	
+						<option value="Large">M</option>
+						<option value="Large">XL</option>
 		      		    </select>
 		      		    <div class="clearfix"></div>
 		      		  </div>
 		      		  <div class="size_2">
-		      		    <div class="size_2-left"> 
+		      		    <div class="size_2-left">
 					       <input type="text" class="item_quantity quantity_1" value="1" />
 					    </div>
 			    	    <div class="size_2-right"><input type="button" class="item_add add3" value="" /></div>
@@ -216,13 +132,13 @@
 				       <select class="item_Size">
 						<option value="Small">L</option>
 						<option value="Medium">S</option>
-						<option value="Large">M</option>	
-						<option value="Large">XL</option>	
+						<option value="Large">M</option>
+						<option value="Large">XL</option>
 		      		    </select>
 		      		    <div class="clearfix"></div>
 		      		  </div>
 		      		  <div class="size_2">
-		      		    <div class="size_2-left"> 
+		      		    <div class="size_2-left">
 					       <input type="text" class="item_quantity quantity_1" value="1" />
 					    </div>
 			    	    <div class="size_2-right"><input type="button" class="item_add add3" value="" /></div>
@@ -246,13 +162,13 @@
 				       <select class="item_Size">
 						<option value="Small">L</option>
 						<option value="Medium">S</option>
-						<option value="Large">M</option>	
-						<option value="Large">XL</option>	
+						<option value="Large">M</option>
+						<option value="Large">XL</option>
 		      		    </select>
 		      		    <div class="clearfix"></div>
 		      		  </div>
 		      		  <div class="size_2">
-		      		    <div class="size_2-left"> 
+		      		    <div class="size_2-left">
 					       <input type="text" class="item_quantity quantity_1" value="1" />
 					    </div>
 			    	    <div class="size_2-right"><input type="button" class="item_add add3" value="" /></div>
@@ -279,13 +195,13 @@
 				       <select class="item_Size">
 						<option value="Small">L</option>
 						<option value="Medium">S</option>
-						<option value="Large">M</option>	
-						<option value="Large">XL</option>	
+						<option value="Large">M</option>
+						<option value="Large">XL</option>
 		      		    </select>
 		      		    <div class="clearfix"></div>
 		      		  </div>
 		      		  <div class="size_2">
-		      		    <div class="size_2-left"> 
+		      		    <div class="size_2-left">
 					       <input type="text" class="item_quantity quantity_1" value="1" />
 					    </div>
 			    	    <div class="size_2-right"><input type="button" class="item_add add3" value="" /></div>
@@ -309,13 +225,13 @@
 				       <select class="item_Size">
 						<option value="Small">L</option>
 						<option value="Medium">S</option>
-						<option value="Large">M</option>	
-						<option value="Large">XL</option>	
+						<option value="Large">M</option>
+						<option value="Large">XL</option>
 		      		    </select>
 		      		    <div class="clearfix"></div>
 		      		  </div>
 		      		  <div class="size_2">
-		      		    <div class="size_2-left"> 
+		      		    <div class="size_2-left">
 					       <input type="text" class="item_quantity quantity_1" value="1" />
 					    </div>
 			    	    <div class="size_2-right"><input type="button" class="item_add add3" value="" /></div>
@@ -339,13 +255,13 @@
 				       <select class="item_Size">
 						<option value="Small">L</option>
 						<option value="Medium">S</option>
-						<option value="Large">M</option>	
-						<option value="Large">XL</option>	
+						<option value="Large">M</option>
+						<option value="Large">XL</option>
 		      		    </select>
 		      		    <div class="clearfix"></div>
 		      		  </div>
 		      		  <div class="size_2">
-		      		    <div class="size_2-left"> 
+		      		    <div class="size_2-left">
 					       <input type="text" class="item_quantity quantity_1" value="1" />
 					    </div>
 			    	    <div class="size_2-right"><input type="button" class="item_add add3" value="" /></div>
@@ -369,13 +285,13 @@
 				       <select class="item_Size">
 						<option value="Small">L</option>
 						<option value="Medium">S</option>
-						<option value="Large">M</option>	
-						<option value="Large">XL</option>	
+						<option value="Large">M</option>
+						<option value="Large">XL</option>
 		      		    </select>
 		      		    <div class="clearfix"></div>
 		      		  </div>
 		      		  <div class="size_2">
-		      		    <div class="size_2-left"> 
+		      		    <div class="size_2-left">
 					       <input type="text" class="item_quantity quantity_1" value="1" />
 					    </div>
 			    	    <div class="size_2-right"><input type="button" class="item_add add3" value="" /></div>
@@ -386,7 +302,10 @@
 			<div class="clearfix"></div>
 		</div>
 		<!-- end grids_of_4 -->
-	</div>
+    </div>
+
+
+
 	<!-- start sidebar -->
 	<div class="col-md-3">
 	  <div class="w_sidebar">
@@ -399,7 +318,7 @@
 				<li><a href="#">boys</a></li>
 				<li><a href="#">girls</a></li>
 				<li><a href="#">sale</a></li>
-			</ul>	
+			</ul>
 		</div>
 		<h3>filter by</h3>
 		<section  class="sky-form">
@@ -423,7 +342,7 @@
 								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>fashion sari</label>
 								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>fashion sari</label>
 								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>fashion sari</label>
-								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>fashion sari</label>	
+								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>fashion sari</label>
 							</div>
 						</div>
 		</section>
@@ -446,7 +365,7 @@
 								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>biba</label>
 								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>shree</label>
 								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Anouk</label>
-								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>biba</label>																								
+								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>biba</label>
 							</div>
 						</div>
 		</section>
@@ -488,7 +407,7 @@
 								<label class="radio"><input type="radio" name="radio"><i></i>20 % and above</label>
 								<label class="radio"><input type="radio" name="radio"><i></i>10 % and above</label>
 							</div>
-						</div>						
+						</div>
 		</section>
 	  </div>
    </div>

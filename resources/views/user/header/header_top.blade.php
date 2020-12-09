@@ -24,22 +24,12 @@
                     </div>
                     <div class="col-xs-6 menu">
                         <ul class="megamenu skyblue">
-                          <li class="active grid"><a class="color1" href="{{route('user.men',1)}}">Smartphone</a><div class="megapanel">
+                          <li class="active grid"><a class="color1" href="{{route('user.smartphone')}}">Smartphone</a><div class="megapanel">
                             <div class="row">
                                 <div class="col1">
                                     <div class="h_nav">
                                         <ul>
-                                            <li><a href="men.html">Accessories</a></li>
-                                            <li><a href="men.html">Bags</a></li>
-                                            <li><a href="men.html">Caps & Hats</a></li>
-                                            <li><a href="men.html">Hoodies & Sweatshirts</a></li>
-                                            <li><a href="men.html">Jackets & Coats</a></li>
-                                            <li><a href="men.html">Jeans</a></li>
-                                            <li><a href="men.html">Jewellery</a></li>
-                                            <li><a href="men.html">Jumpers & Cardigans</a></li>
-                                            <li><a href="men.html">Leather Jackets</a></li>
-                                            <li><a href="men.html">Long Sleeve T-Shirts</a></li>
-                                            <li><a href="men.html">Loungewear</a></li>
+                                          
                                         </ul>
                                     </div>
                                 </div>
@@ -79,7 +69,7 @@
                               </div>
                             </div>
                         </li>
-                        <li class="grid"><a class="color2" href="{{route('user.men',1)}}">Laptop</a>
+                        <li class="grid"><a class="color2" href="{{route('user.smartphone')}}">Laptop</a>
                           <div class="megapanel">
                             <div class="row">
                                 <div class="col1">

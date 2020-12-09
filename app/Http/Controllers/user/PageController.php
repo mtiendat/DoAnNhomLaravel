@@ -5,6 +5,7 @@ namespace App\Http\Controllers\user;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\SanPham;
+use App\Models\LoaiSP;
 class PageController extends Controller
 {
     //
@@ -33,7 +34,7 @@ class PageController extends Controller
     public function men()
     {
 
-        return view($this->viewprefix.'men');
+        return view($this->viewprefix.'smartphone');
     }
     public function register()
     {
@@ -54,10 +55,16 @@ class PageController extends Controller
     public function contact(){
         return view($this->viewprefix.'contact');
     }
-    
+
     public function single(Request $request, $id){
         $sanpham = SanPham::where('id',$request->id)->get();
         return view($this->viewprefix.'single',compact('sanpham'));
     }
+
+    public function smartphone(){
+        $smartphone=SanPham::where('MaLoai',1)->orWhere('MaLoai',2)->get();
+        return view($this->viewprefix.'smartphone',compact('smartphone'));
+    }
+
 
 }

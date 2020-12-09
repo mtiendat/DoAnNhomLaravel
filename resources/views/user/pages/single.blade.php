@@ -1,7 +1,7 @@
 @extends('user.layout')
 @section('content')
 <div class="single_top">
-	 <div class="container"> 
+	 <div class="container">
 	      <div class="single_grid">
 				<div class="grid images_3_of_2">
 						<ul id="etalage">
@@ -24,8 +24,8 @@
 								<img class="etalage_source_image" src="images/s4.jpg"class="img-responsive"  />
 							</li>
 						</ul>
-						 <div class="clearfix"></div>		
-				  </div> 
+						 <div class="clearfix"></div>
+				  </div>
 				  <div class="desc1 span_3_of_2">
 				  	<ul class="back">
                 	  <li><i class="back_arrow"> </i>Back to <a href="index.html">Men's Clothing</a></li>
@@ -35,7 +35,7 @@
 				     <div class="dropdown_top">
 				       <div class="dropdown_left">
 					     <select class="dropdown" tabindex="10" data-settings='{"wrapperClass":"metro1"}'>
-	            			<option value="0">Select size</option>	
+	            			<option value="0">Select size</option>
 							<option value="1">M</option>
 							<option value="2">L</option>
 							<option value="3">XL </option>
@@ -62,12 +62,12 @@
 					     </div>
 			               <!--<div class="single_but"><a href="" class="item_add btn_3" value=""></a></div>-->
 			              <div class="size_2-right"><a href="#" class="item_add item_add1 btn_5" value="" />Add to Cart </a></div>
-			          
+
 			         </div>
 				</div>
           	    <div class="clearfix"></div>
           	   </div>
-          	 <div class="single_social_top">   
+          	 <div class="single_social_top">
           	  <ul class="single_social">
 				  <li><a href="#"> <i class="s_fb"> </i> <div class="social_desc">Share<br> on facebook</div><div class="clearfix"> </div></a></li>
 				  <li><a href="#"> <i class="s_twt"> </i> <div class="social_desc">Tweet<br> this product</div><div class="clearfix"> </div></a></li>
@@ -114,40 +114,22 @@
    <h3 class="m_2">Related Products</h3>
 	     <div class="container">
           		<div class="box_3">
+
+                    @foreach($sp_theoloai as $lsp)
           			<div class="col-md-3">
           				<div class="content_box"><a href="single.html">
 			   	          <img src="images/pic6.jpg" class="img-responsive" alt="">
 				   	   </a>
 				   </div>
-				    <h4><a href="single.html">Contrary to popular belief</a></h4>
-				    <p>$ 199</p>
+				    <h4><a href="single.html">{{$lsp->TenSP}}</a></h4>
+				    <p>{{$lsp->Gia}}</p>
 			        </div>
-          			<div class="col-md-3">
-          				<div class="content_box"><a href="single.html">
-			   	          <img src="images/pic2.jpg" class="img-responsive" alt="">
-				   	   </a>
-				   </div>
-				    <h4><a href="single.html">Contrary to popular belief</a></h4>
-				    <p>$ 199</p>
-			        </div>
-          			<div class="col-md-3">
-          				<div class="content_box"><a href="single.html">
-			   	          <img src="images/pic4.jpg" class="img-responsive" alt="">
-				   	   </a>
-				   </div>
-				    <h4><a href="single.html">Contrary to popular belief</a></h4>
-				    <p>$ 199</p>
-			        </div>
-          			<div class="col-md-3">
-          				<div class="content_box"><a href="single.html">
-			   	          <img src="images/pic5.jpg" class="img-responsive" alt="">
-				   	   </a>
-				   </div>
-				    <h4><a href="single.html">Contrary to popular belief</a></h4>
-				    <p>$ 199</p>
-			        </div>
+
+
 			        <div class="clearfix"> </div>
-          		</div>
+                  </div>
+
+                  @endforeach
           	</div>
         </div>
 @stop
