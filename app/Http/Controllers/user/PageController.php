@@ -31,11 +31,6 @@ class PageController extends Controller
 
         return view($this->viewprefix.'about');
     }
-<<<<<<< Updated upstream
-
-
-=======
->>>>>>> Stashed changes
     public function register()
     {
 
@@ -59,15 +54,9 @@ class PageController extends Controller
         return view($this->viewprefix.'contact');
     }
 
-
-<<<<<<< Updated upstream
     public function single($id){
       
         $sanpham = SanPham::where('id',$id)->first();
-=======
-    public function single(Request $request){
-        $sanpham = SanPham::where('id',$request->id)->first();
->>>>>>> Stashed changes
         $sanpham_lienquan=SanPham::where('MaLoai', $sanpham->MaLoai)->paginate(4);
         return view($this->viewprefix.'single',compact('sanpham','sanpham_lienquan'));
 
