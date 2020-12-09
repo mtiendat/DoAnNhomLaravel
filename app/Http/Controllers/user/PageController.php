@@ -17,7 +17,8 @@ class PageController extends Controller
     public function index()
     {
         $latesproducts = SanPham::where('DanhMuc',1)->paginate(3);
-        return view($this->viewprefix.'index',compact('latesproducts'));
+        $newproducts = SanPham::where('DanhMuc',1)->paginate(3);
+        return view($this->viewprefix.'index',compact('latesproducts','newproducts'));
     }
     public function index_single()
     {

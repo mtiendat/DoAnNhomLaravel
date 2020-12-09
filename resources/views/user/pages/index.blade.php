@@ -55,7 +55,7 @@
 	<div class="grid_1">
 		<div class="col-md-6 blog_1"><a href="index_single.html">
 			<div class="item-inner"> 
-				<img src="{!! asset('user/images/pic7.jpg') !!}" class="img-responsive" alt=""/>																	
+				<img src="{!! asset('image/'.$sanpham->Image) !!}" class="img-responsive" alt=""/>																	
 					<div class="date-comments">
 						<div class="time"><span class="date"><span class="word1">14</span> <span class="word2">Jan</span> </span></div>											 
 						<div class="comments">
@@ -67,7 +67,7 @@
 		</a></div>
 		<div class="col-md-6 row_2"><a href="index_single.html">
 			<div class="item-inner"> 
-				<img src="{!! asset('user/images/pic8.jpg') !!}" class="img-responsive" alt=""/>																	
+				<img src="{!! asset('image/'.$sanpham->Image) !!}" class="img-responsive" alt=""/>																	
 					<div class="date-comments">
 						<div class="time"><span class="date"><span class="word1">14</span> <span class="word2">Jan</span> </span></div>											 
 						<div class="comments">
@@ -85,33 +85,18 @@
 	<div class="col-md-6 row_4"></div>
 	 <div class="col-md-6">
 		<div class="row_5">
+		@foreach($newproducts as $sanpham)
 						<div class="col_1_of_3 span_1_of_3">
 							<div class="shop-holder1">
-		                        <a href="single.html"><img src="{!! asset('user/images/pic4.jpg') !!}" class="img-responsive" alt=""/></a>
+		                        <a href="single.html"><img src="{!! asset('image/'.$sanpham->Image) !!}" class="img-responsive" alt=""/></a>
 		                    </div>
 		                    <div class="shop-content" style="height: 80px;">
-		                            <h3><a href="single.html">Non-charac</a></h3>
-		                            <span><span class="amount">$45.00</span></span>
+		                            <h3><a href="{{route('user.single', $sanpham->id)}}">{{$sanpham->TenSP}}</a></h3>
+		                            <span><span class="amount">{{$sanpham->Gia}}</span></span>
 		                    </div>
-						</div>
-						<div class="col_1_of_3 span_1_of_3">
-							<div class="shop-holder1">
-		                        <a href="single.html"><img src="{!! asset('user/images/pic5.jpg') !!}" class="img-responsive" alt=""/></a>
-		                    </div>
-		                    <div class="shop-content" style="height: 80px;">
-		                            <h3><a href="single.html">Non-charac</a></h3>
-		                            <span><span class="amount">$45.00</span></span>
-		                    </div>
-						</div>
-						<div class="col_1_of_3 span_1_of_3">
-							<div class="shop-holder1">
-		                        <a href="single.html"><img src="{!! asset('user/images/pic6.jpg') !!}" class="img-responsive" alt=""/></a>
-		                    </div>
-		                    <div class="shop-content" style="height: 80px;">
-		                            <h3><a href="single.html">Non-charac</a></h3>
-		                            <span><span class="amount">$45.00</span></span>
-		                    </div>
-						</div>
+						</div>						
+						@endforeach
+
 						<div class="clearfix"></div> 
 					</div>
 	</div>
