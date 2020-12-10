@@ -5,13 +5,13 @@
 	    <div class="register">
 			  <div class="col-md-6 login-right">
 			  	<h3>REGISTERED CUSTOMERS</h3>
-				<p>If you have an account with us, please log in.</p>
-                <form action="{{route('user.login')}}" method="post" class="beta-form-checkout">
-                    <input type="hidden" name="_token" value="{{csrf_token()}}">
-				  <div>
-                    @if(Session::has('flag'))
+				<p>@if(Session::has('flag'))
                     <div class="alert alert-{{Session::get('flag')}}">{{Session::get('message')}}</div>
-                    @endif
+                @endif
+                </p>
+                <form action="{{route('user.login')}}" method="post" class="beta-form-checkout">
+                    {{ csrf_field() }}
+				  <div>
 					<span>Email Address<label>*</label></span>
 					<input type="text" name="email">
 				  </div>

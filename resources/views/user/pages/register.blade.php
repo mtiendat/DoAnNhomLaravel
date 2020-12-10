@@ -2,22 +2,24 @@
 @section('content')
 <div class="single_top">
 	 <div class="container">
-	     <div class="register">
+	     <div  class="register-but">
+
+            <div>
+                @if(count($errors)>0)
+                <div class="alert alert-danger">
+                    @foreach($errors->all() as $err)
+                    {{$err}}
+                    @endforeach
+                </div>
+            @endif
+            @if(Session::has('thanhcong'))
+                <div class="alert alert-success">{{Session::get('thanhcong')}}</div>
+            @endif
+                 </div>
+
                 <form  action="{{route('user.register')}}" method="post" class="beta-form-checkout">
                 	{{csrf_field()}}
 				 <div class="register-top-grid">
-                     <div>
-                    @if(count($errors)>0)
-                    <div class="alert alert-danger">
-                        @foreach($errors->all() as $err)
-                        {{$err}}
-                        @endforeach
-                    </div>
-                @endif
-                @if(Session::has('thanhcong'))
-                    <div class="alert alert-success">{{Session::get('thanhcong')}}</div>
-                @endif
-                     </div>
 					<h3>PERSONAL INFORMATION</h3>
 					 <div>
 						<span>First Name<label>*</label></span>
@@ -51,6 +53,7 @@
 
 				<div class="clearfix"> </div>
 				<div class="register-but">
+                  
 					   <input type="submit" value="submit">
 					   <div class="clearfix"> </div>
 				   </form>

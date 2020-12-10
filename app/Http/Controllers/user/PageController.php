@@ -9,6 +9,7 @@ use App\Models\SanPham;
 use App\Models\LoaiSP;
 use App\Models\User;
 use Auth;
+use Symfony\Component\HttpFoundation\Session\Session;
 use Illuminate\Support\Facades\Hash;
 class PageController extends Controller
 {
@@ -71,42 +72,21 @@ class PageController extends Controller
         return view($this->viewprefix.'smartphone',compact('smartphone'));
     }
 
-    public function postDangNhap(Request $req){
-        $this->validate($req,
-            [
-                'email'=>'required|email',
-                'password'=>'required|min:6|max:20'
-            ],
-            [
-                'email.required'=>'Vui lòng nhập email',
-                'email.email'=>'Email không đúng định dạng',
-                'password.required'=>'Vui lòng nhập mật khẩu',
-                'password.min'=>'Mật khẩu ít nhất 6 kí tự',
-                'password.max'=>'Mật khẩu không quá 20 kí tự'
-            ]
-        );
-        $credentials = array('email'=>$req->email,'password'=>$req->password);
-        $user = User::where([
-                ['email','=',$req->email],
-                ['status','=',NULL]
-            ])->first();
-        if($user){
-            if(Auth::attempt($credentials)){
-
-            return redirect()->route('user.index')->with(['flag'=>'success','message'=>'Đăng nhập thành công']);
-            }
-            else{
-                return redirect()->back()->with(['flag'=>'danger','message'=>'Đăng nhập không thành công']);
-            }
+    public function postDangNhap(Request $request){
+        $login = [
+            'email' => $request->email,
+            'password' => $request->password,
+            //'status'    =>1
+        ];
+        if (Auth::attempt($login)) {
+        return redirect()->route('user.index')->with('name',Auth::User()->name);
+        }  else{
+            return redirect()->back()->with(['flag'=>'danger','message'=>'Đăng nhập không thành công']);
         }
-        else{
-           return redirect()->back()->with(['flag'=>'danger','message'=>'Tài khoản chưa kích hoạt']);
-        }
-
     }
 
     public function DangKy(Request $req){
-        $this->validate($req,
+       $this->validate($req,
             [
                 'hoten'=>'required',
                 'name'=>'required',
@@ -121,13 +101,14 @@ class PageController extends Controller
                 're_password.same'=>'Mật khẩu không giống nhau',
                 'password.min'=>'Mật khẩu ít nhất 6 kí tự'
             ]);
+
         $user = new User();
         $user->hoten=$req->hoten;
         $user->name = $req->name;
         $user->email = $req->email;
         $user->password = Hash::make($req->password);
         $user->save();
-        return redirect()->route('user.login')->with('thanhcong','Tạo tài khoản thành công');
+        return redirect()->route('user.login')->with('ThanhCong','Tạo tài khoản thành công');
     }
 
     public function LogOut(){
