@@ -76,7 +76,7 @@ class PageController extends Controller
         $login = [
             'email' => $request->email,
             'password' => $request->password,
-            //'status'    =>1
+            'trangthai'    =>"active"
         ];
         if (Auth::attempt($login)) {
         return redirect()->route('user.index')->with('name',Auth::User()->name);
@@ -91,6 +91,7 @@ class PageController extends Controller
                 'hoten'=>'required',
                 'name'=>'required',
                 'email'=>'required|email|unique:users,email',
+                'trangthai'=>'required',
                 'password'=>'required|min:6|max:20',
                 're_password'=>'required|same:password'
             ],
@@ -106,6 +107,7 @@ class PageController extends Controller
         $user->hoten=$req->hoten;
         $user->name = $req->name;
         $user->email = $req->email;
+        $user->trangthai=$req->trangthai;
         $user->password = Hash::make($req->password);
         $user->save();
         return redirect()->route('user.login')->with('ThanhCong','Tạo tài khoản thành công');

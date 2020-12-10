@@ -33,10 +33,11 @@
 						 <span>Email Address<label>*</label></span>
 						 <input type="text" name="email">
 					 </div>
-					 <div class="clearfix"> </div>
-					   <a class="news-letter" href="#">
-						 <label class="checkbox"><input type="checkbox" checked=""><i> </i>Sign Up for Newsletter</label>
-					   </a>
+					 <div class="clearfix"> Trạng Thái</div>
+					   <select name="trangthai">
+                           <option name="trangthai"> active</option>
+                           <option name="trangthai"> default</option>
+					   </select>
 					 </div>
 				     <div class="register-bottom-grid">
 						    <h3>LOGIN INFORMATION</h3>
@@ -53,7 +54,7 @@
 
 				<div class="clearfix"> </div>
 				<div class="register-but">
-                  
+
 					   <input type="submit" value="submit">
 					   <div class="clearfix"> </div>
 				   </form>
