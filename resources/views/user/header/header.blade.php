@@ -14,6 +14,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- Custom Theme files -->
 <!--webfont-->
 <link href='http://fonts.googleapis.com/css?family=Lato:100,200,300,400,500,600,700,800,900' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script type="{{asset('user/text/javascript')}}" src="js/jquery-1.11.1.min.js"></script>
 <!-- start menu -->
 <link href="{{asset('user/css/megamenu.css')}}" rel="stylesheet" type="text/css" media="all" />

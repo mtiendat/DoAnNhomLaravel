@@ -147,11 +147,11 @@
                   <p class="empty"><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>
                   <div class="clearfix"> </div>
                 </div>
-                <div class="search">
-                    <input type="text" name="s" class="textbox" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}">
-                    <input type="submit" value="Subscribe" id="submit" name="submit">
+                <form role="search" method="get" id="searchform" action="{{route('user.pages.timkiem')}}">
+                    <input type="text" name="key" class="textbox" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}">
+                    <button type="submit"><i class="fa fa-search"></i></button>
                     <div id="response"> </div>
-                 </div>
+                    </form>
                <div class="clearfix"></div>
            </div>
             <div class="clearfix"></div>

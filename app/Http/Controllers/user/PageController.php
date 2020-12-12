@@ -25,6 +25,12 @@ class PageController extends Controller
         $newproducts = SanPham::where('DanhMuc',1)->paginate(3);
         return view($this->viewprefix.'index',compact('latesproducts','newproducts'));
     }
+    public function TimKiem(Request $request){
+        $sanpham=SanPham::where('TenSP','like','%'.$request->key.'%')->get();
+         return view('user.pages.timkiem',compact('sanpham'));
+    }
+
+       
     public function index_single()
     {
 
@@ -117,5 +123,6 @@ class PageController extends Controller
         Auth::logout();
         return redirect()->route('user.index');
     }
+   
 
 }

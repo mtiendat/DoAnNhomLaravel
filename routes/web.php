@@ -54,7 +54,7 @@ Route::group(['prefix' => 'user', 'namespace' => 'user'], function() {
     Route::get('smartphone','PageController@smartphone')->name('user.smartphone');
 	Route::get('laptop','PageController@laptop')->name('user.laptop');
 	Route::get('single/{id}','PageController@single')->name('user.single');
-
+	Route::get('timkiem','PageController@TimKiem')->name('user.pages.timkiem');
 
 });
 
