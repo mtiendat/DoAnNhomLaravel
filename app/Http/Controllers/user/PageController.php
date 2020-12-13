@@ -1,7 +1,5 @@
 <?php
-
 namespace App\Http\Controllers\user;
-
 use App\Http\Controllers\Controller;
 use App\Models\Admin;
 use Illuminate\Http\Request;
@@ -30,7 +28,7 @@ class PageController extends Controller
          return view('user.pages.timkiem',compact('sanpham'));
     }
 
-       
+
     public function index_single()
     {
 
@@ -90,7 +88,6 @@ class PageController extends Controller
             return redirect()->back()->with(['flag'=>'danger','message'=>'Đăng nhập không thành công']);
         }
     }
-
     public function DangKy(Request $req){
        $this->validate($req,
             [
@@ -123,6 +120,5 @@ class PageController extends Controller
         Auth::logout();
         return redirect()->route('user.index');
     }
-   
 
 }
