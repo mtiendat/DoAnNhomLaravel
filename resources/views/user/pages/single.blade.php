@@ -62,7 +62,7 @@
 			</li>
 		</ul>
 	</div>
-	
+
 
 
 		<h3 class="m_2">Related Products</h3>
@@ -85,7 +85,8 @@
 
 				<div class="clearfix"> </div>
 			</div>
-		</div>
+        </div>
+        
 	</div>
 </div>
 @stop

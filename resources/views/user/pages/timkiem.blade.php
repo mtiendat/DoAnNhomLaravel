@@ -11,40 +11,24 @@
         </div>
     </div>
 </div>
-<div class="women_main">
-	<div class="col-md-9 w_content">
-@foreach($sanpham as $sanphams)
-		<div class="grids_of_4">
-		  <div class="grid1_of_4 simpleCart_shelfItem">
-				<div class="content_box"><a href="{{route('user.single',$sanphams->id)}}">
-			   	  <div class="view view-fifth">
-			   	   	 <img src="{!! asset('image/'.$sanphams->Image) !!}" height="10px" class="img-responsive" alt=""/>
-				   	   	<div class="mask1">
-	                        <div class="info"> </div>
-			            </div>
-				   	  </a>
-				   </div>
-
-				    <h5><a href="{{route('user.single',$sanphams->id)}}"> {{$sanphams->TenSP}}</a></h5>
-				    <h6>{{$sanphams->MoTa}}</h6>
-				     <div class="size_1">
-				     	<span class="item_price">{{$sanphams->GiaMoi}}</span>
-				       <select class="item_Size">
-						<option value="Small">{{$sanphams->Size}}</option>
-
-		      		    </select>
-		      		    <div class="clearfix"></div>
-		      		  </div>
-		      		  <div class="size_2">
-		      		    <div class="size_2-left">
-					       <input type="text" class="item_quantity quantity_1" value="1" />
-					    </div>
-			    	    <div class="size_2-right"><input type="button" class="item_add add3" value="" /></div>
-			    	    <div class="clearfix"> </div>
-			    	 </div>
-			     </div>
+<div class="container">
+    <div class="box_3">
+        @foreach($sanpham as $sanphams)
+        <div class="col-md-3">
+            <div class="content_box"><a href="{{route('user.single', $sanphams->id)}}">
+                    <img width="225" height="265" src="{!! asset('image/'.$sanphams->Image) !!}"
+                        class="img-responsive" alt="item4"> </a>
+                <a href="" class="button item_add"></a>
             </div>
-            @endforeach
+            <div class="shop-content" style="height: 80px;">
+                <h3><a href="{{route('user.single', $sanphams->id)}}">{{$sanphams->TenSP}}</a></h3>
+                <del>{{$sanphams->Gia}}</del>
+                <span class="amount item_price">{{$sanphams->GiaMoi}} VND</span>
+            </div>
+        </div>
+        @endforeach
+
+        <div class="clearfix"> </div>
     </div>
 </div>
 @stop
