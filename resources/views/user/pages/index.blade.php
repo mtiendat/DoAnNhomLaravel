@@ -7,7 +7,7 @@
 			<h1>NEW IPHONE 2020</h1>
 			<h2>APPLE</h2>
 			<div class="button">
-			      <a href="#" class="hvr-shutter-out-horizontal">Shop Now</a>
+			      <a href="{{route('user.single',1)}}" class="hvr-shutter-out-horizontal">Shop Now</a>
 			    </div>
 		</div>
 	</div>
@@ -22,9 +22,9 @@
 						<div class="col_1_of_3 span_1_of_3 simpleCart_shelfItem">
 							<div class="shop-holder">
 		                         <div class="product-img">
-		                            <a href="single.html">
+		                            <a href="{{route('user.single', $sanpham->id)}}">
 		                                <img width="225" height="265" src="{!! asset('image/'.$sanpham->Image) !!}" class="img-responsive"  alt="item4">		                            </a>
-		                            <a href="" class="button item_add"></a>		                         
+		                            <a href="{{route('user.single', $sanpham->id)}}" class="button item_add"></a>		                         
 									</div>
 		                    </div>
 		                    <div class="shop-content" style="height: 80px;">
@@ -55,7 +55,7 @@
 <div class="container">
 	<h2 class="m_3">NEW PRODUCT</h2>
 	<div class="grid_1">
-		<div class="col-md-6 blog_1"><a href="index_single.html">
+		<div class="col-md-6 blog_1">
 			<div class="item-inner"> 
 				<img src="{!! asset('image/123.jpg') !!}" class="img-responsive" alt=""/>																	
 					<div class="date-comments">
@@ -67,7 +67,7 @@
 					 </div>
 			</div>   
 		</a></div>
-		<div class="col-md-6 row_2"><a href="index_single.html">
+		<div class="col-md-6 row_2">
 			<div class="item-inner"> 
 				<img src="{!! asset('image/456.jpg') !!}" class="img-responsive" alt=""/>																	
 					<div class="date-comments">
@@ -91,9 +91,9 @@
 						<div class="col_1_of_3 span_1_of_3">
 						<div class="shop-holder">
 		                         <div class="product-img">
-		                            <a href="single.html">
+		                            <a href="{{route('user.single', $sanpham->id)}}">
 		                                <img width="225" height="265" src="{!! asset('image/'.$sanpham->Image) !!}" class="img-responsive"  alt="item4">		                            </a>
-		                            <a href="" class="button item_add"></a>		                         
+		                            <a href="{{route('user.single', $sanpham->id)}}" class="button item_add"></a>		                         
 									</div>
 		                    </div>
 		                    <div class="shop-content" style="height: 80px;">

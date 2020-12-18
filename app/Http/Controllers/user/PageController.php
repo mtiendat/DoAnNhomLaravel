@@ -57,7 +57,8 @@ class PageController extends Controller
     }
     public function laptop(){
     $laptop = SanPham::where('MaLoai',3)->orwhere('MaLoai',4)->get();
-    return view($this->viewprefix.'laptop',compact('laptop'));
+    $soluongsanpham = count($laptop);
+    return view($this->viewprefix.'laptop',compact('laptop','soluongsanpham'));
    }
     public function contact(){
         return view($this->viewprefix.'contact');
@@ -73,7 +74,8 @@ class PageController extends Controller
 
     public function smartphone(){
         $smartphone=SanPham::where('MaLoai',1)->orWhere('MaLoai',2)->get();
-        return view($this->viewprefix.'smartphone',compact('smartphone'));
+        $soluongsanpham = count($smartphone);
+        return view($this->viewprefix.'smartphone',compact('smartphone','soluongsanpham'));
     }
 
     public function postDangNhap(Request $request){

@@ -5,7 +5,7 @@
 <div class="women_main">
 	<div class="col-md-9 w_content">
 	    <div class="women">
-			<a href="#"><h4>LAPTOP NEW- <span>2020</span> </h4></a>
+			<a href="#"><h4>TOTAL - <span>{{$soluongsanpham}} items</span> </h4></a>
 		     <div class="clearfix"></div>	
 		</div>
 				<!-- grids_of_4 -->
@@ -22,7 +22,7 @@
 			            </div>
 				   	  </a>
 				   </div>
-				    <h5><a href="{{route('user.laptop', $sanpham->id)}}">{{$sanpham->TenSP}}</a></h5>
+				    <h5><a href="{{route('user.single', $sanpham->id)}}">{{$sanpham->TenSP}}</a></h5>
 				     <div class="size_1">
 				     	<span class="item_price">{{$sanpham->GiaMoi}} VND</span>
 				       <select class="item_Size">

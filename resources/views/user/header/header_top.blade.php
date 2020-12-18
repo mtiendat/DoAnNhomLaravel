@@ -2,12 +2,6 @@
 <body>
     <div class="header_top">
         <div class="container">
-            <div class="one-fifth column row_1">
-                <span class="selection-box"><select class="domains valid" name="domains">
-                   <option>English</option>
-
-                </select></span>
-             </div>
              <div class="cssmenu">
                 <ul>
                         @if(Auth::check())
@@ -24,7 +18,7 @@
             <div class="container">
                 <div class="col-xs-8 header-bottom-left">
                     <div class="col-xs-2 logo">
-                        <h1><a href="{{route('user.index')}}"><span>Buy</span>shop</a></h1>
+                        <h1><a href="{{route('user.index')}}"><span>PHONE</span>SHOP</a></h1>
                     </div>
                     <div class="col-xs-6 menu">
                         <ul class="megamenu skyblue">
@@ -134,22 +128,15 @@
                               </div>
                             </div>
                     </li>
-                    <li><a class="color4" href="{{route('user.about')}}">About</a></li>
-                    <li><a class="color6" href="contact.html">Support</a></li>
                   </ul>
                 </div>
             </div>
             <div class="col-xs-4 header-bottom-right">
-               <div class="box_1-cart">
-                 <div class="box_11"><a href="{{route('user.checkout')}}">
-                  <h4><p>Cart: <span class="simpleCart_total"></span> (<span id="simpleCart_quantity" class="simpleCart_quantity"></span> items)</p><img src="images/bag.png" alt=""/><div class="clearfix"> </div></h4>
-                  </a></div>
-                  <p class="empty"><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>
-                  <div class="clearfix"> </div>
-                </div>
                 <form role="search" method="get" id="searchform" action="{{route('user.pages.timkiem')}}">
-                    <input type="text" name="key" class="textbox" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}">
-                    <button type="submit"><i class="fa fa-search"></i></button>
+                <div class="form-group">
+                    <input type="text" class="form-control" style="width:60%" name="key" class="textbox" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}">
+                </div>
+                    <button type="submit" style="margin-top:-10px;margin-left:190px " class="btn btn-primary"><i class="fa fa-search"></i></button>
                     <div id="response"> </div>
                     </form>
                <div class="clearfix"></div>
